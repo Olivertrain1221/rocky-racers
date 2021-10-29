@@ -1,3 +1,9 @@
+// last thing i did was fill the circles.
+// tomrrow add the hand color fill in depending on user selection 
+// then time out for 3 seconds
+// then turn the aiselection on
+
+
 let userName = "";
 
 // modal container element assignement
@@ -79,6 +85,25 @@ function greenLightOn() {
 }
 
 
+function turnOnAiSelectionEffect(ai) {
+   console.log("start aieffect function");
+   console.log(ai);
+    let rockOuterCircle = document.getElementById("rock-circle");
+    let paperOuterCircle = document.getElementById("paper-circle");
+    let scissorOuterCircle = document.getElementById("scissor-circle");
+    
+    if (ai == "rock") {
+        rockOuterCircle.classList.add("outer-circle-fill");
+        console.log("rock on");
+    } else if (ai == "paper") {
+        paperOuterCircle.classList.add("outer-circle-fill");
+        console.log("paper on");
+    } else if (ai == "scissor") {
+        scissorOuterCircle.classList.add("outer-circle-fill");
+        console.log("scissor on");
+    }
+}
+
 function turnOnHoverAffect() {
 
     let rockInnerImg = document.getElementById("inner-rock-image");
@@ -112,7 +137,6 @@ function gameStartup() {
     setTimeout(function () {
         greenLightOn();
         turnOnHoverAffect()
-        // gameTileEventListeners();
     }, 3000);
 
 }
@@ -125,8 +149,11 @@ let scissor = document.getElementById("scissor-image");
 //  Adds event listeners
 // function gameTileEventListeners() {
 rock.addEventListener("click", function () {
+    //   toggle class for fill
+    //  then time interval before userSelection!!
+    
     userSelection("r");
-  
+
 });
 paper.addEventListener("click", function () {
     userSelection("p");
@@ -150,8 +177,8 @@ function userSelection(tile) {
     }
 
     console.log(user);
-    // removeGameTileEventListeners();
     aiSelection(user);
+    
 }
 
 
@@ -160,7 +187,11 @@ function aiSelection(user) {
     let aiOptions = ["rock", "paper", "scissor"];
     let ai = aiOptions[Math.floor(Math.random() * 3)];
     console.log(ai);
-    gameLogic(user, ai);
+    turnOnAiSelectionEffect(ai);
+    setTimeout(function () {
+        gameLogic(user, ai);
+    }, 3000);   
+
 }
 
 let aiScoreBoard = document.getElementById("ai-score");
