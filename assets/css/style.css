@@ -38,3 +38,29 @@ h1 {
     position: relative;
     z-index: 10;
 }
+
+close-button {
+    width: 80px;
+    background-color: #3b2e27;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-left: 275px;
+    margin-top: 30px;
+}
+
+#button-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+    background-color: #c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color: #442208
+}
