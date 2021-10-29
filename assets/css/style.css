@@ -148,3 +148,41 @@ h1 {
     border-radius: 50%;
     border-top: 2px solid rgb(51, 50, 50);
 }
+
+#scissor-image {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    z-index:10;
+
+    /* display:none; */
+}
+
+#scissor-image>* {
+    position: relative;
+    z-index: 9;
+}
+#paper-image>* {
+    position: relative;
+    z-index: 9;
+}
+#rock-image>* {
+    position: relative;
+    z-index: 9;
+}
+
+#paper-image {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    z-index:10;
+    /* display: none; */
+}
+
+#rock-image {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    z-index:10;
+    /* display: none; */
+}
