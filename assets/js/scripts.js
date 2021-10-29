@@ -80,7 +80,7 @@ function greenLightOn() {
 
 function gameStartup() {
     let userNameSpan = document.getElementById("users-name");
-    userNameSpan.innerHTML = userName;    
+    userNameSpan.innerHTML = userName;
     let scoreBoard = document.getElementById("score-board");
     scoreBoard.style.display = "flex";
     let gameTiles = document.getElementsByClassName("rock-paper-scissor-logo")[0];
@@ -91,7 +91,7 @@ function gameStartup() {
     // time section for traffic light
     setTimeout(function () {
         redLightOn();
-    }, 2000);   
+    }, 2000);
 
     setTimeout(function () {
         yellowLightOn();
@@ -111,12 +111,38 @@ let scissor = document.getElementById("scissor-image");
 
 //  Adds event listeners
 // function gameTileEventListeners() {
-    rock.addEventListener("click", function () {
-        userSelection("r");
-    });
-    paper.addEventListener("click", function () {
-        userSelection("p");
-    });
-    scissor.addEventListener("click", function () {
-        userSelection("s");
-    });
+rock.addEventListener("click", function () {
+    userSelection("r");
+});
+paper.addEventListener("click", function () {
+    userSelection("p");
+});
+scissor.addEventListener("click", function () {
+    userSelection("s");
+});
+
+
+
+function userSelection(tile) {
+    console.log(tile);
+    let user = "";
+    if (tile == "r") {
+        user = "rock";
+        console.log("rock test");
+    } else if (tile == "p") {
+        user = "paper";
+    } else if (tile == "s") {
+        user = "scissor";
+    }
+
+    console.log(user);
+    // removeGameTileEventListeners();
+    aiSelection(user);
+}
+
+function aiSelection(user) {
+    let aiOptions = ["rock", "paper", "scissor"];
+    let ai = aiOptions[Math.floor(Math.random() * 3)];
+    console.log(ai);
+    gameLogic(user, ai);
+}
