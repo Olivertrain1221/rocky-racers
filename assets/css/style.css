@@ -175,8 +175,7 @@ h1 {
     height: 150px;
     width: 150px;
     position: relative;
-    z-index:10;
-    /* display: none; */
+    z-index:10; 
 }
 
 #rock-image {
@@ -184,5 +183,4 @@ h1 {
     width: 150px;
     position: relative;
     z-index:10;
-    /* display: none; */
 }
