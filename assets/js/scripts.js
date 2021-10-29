@@ -103,3 +103,20 @@ function gameStartup() {
     }, 3000);
 
 }
+
+
+let rock = document.getElementById("rock-image");
+let paper = document.getElementById("paper-image");
+let scissor = document.getElementById("scissor-image");
+
+//  Adds event listeners
+// function gameTileEventListeners() {
+    rock.addEventListener("click", function () {
+        userSelection("r");
+    });
+    paper.addEventListener("click", function () {
+        userSelection("p");
+    });
+    scissor.addEventListener("click", function () {
+        userSelection("s");
+    });
