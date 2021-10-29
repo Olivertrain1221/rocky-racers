@@ -59,3 +59,21 @@ function modalContainerClick(e) {
         console.log("testing")
     }
 }
+
+
+function redLightOn() {
+    let redLight = document.getElementById("red");
+    redLight.style.backgroundColor = "red";
+}
+
+function yellowLightOn() {
+    let yellowLight = document.getElementById("yellow");
+    yellowLight.style.backgroundColor = "yellow";
+
+}
+
+function greenLightOn() {
+    let greenLight = document.getElementById("green");
+    greenLight.style.backgroundColor = "green";
+
+}
