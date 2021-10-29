@@ -153,7 +153,7 @@ h1 {
     height: 150px;
     width: 150px;
     position: relative;
-    z-index:10;
+    z-index: 10;
 
     /* display:none; */
 }
@@ -162,10 +162,12 @@ h1 {
     position: relative;
     z-index: 9;
 }
+
 #paper-image>* {
     position: relative;
     z-index: 9;
 }
+
 #rock-image>* {
     position: relative;
     z-index: 9;
@@ -175,12 +177,40 @@ h1 {
     height: 150px;
     width: 150px;
     position: relative;
-    z-index:10; 
+    z-index: 10;
 }
 
 #rock-image {
     height: 150px;
     width: 150px;
     position: relative;
-    z-index:10;
+    z-index: 10;
+}
+
+.rock-paper-scissor-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    display: none;
+}
+
+#score-board {
+    width: 500px;
+    height: 200px;
+    background-color: #713500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Mukta', sans-serif;
+    font-size: 30px;
+    border-color: #966036;
+}
+
+#user-score,
+#ai-score {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Mukta', sans-serif;
 }
