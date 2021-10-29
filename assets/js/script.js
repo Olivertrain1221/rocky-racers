@@ -78,6 +78,18 @@ function greenLightOn() {
 
 }
 
+
+function turnOnHoverAffect() {
+
+    let rockInnerImg = document.getElementById("inner-rock-image");
+    let paperInnerImg = document.getElementById("inner-paper-image");
+    let scissorInnerImg = document.getElementById("inner-scissor-image");
+    
+    rockInnerImg.classList.add("inner-tile-hover");
+    paperInnerImg.classList.add("inner-tile-hover");
+    scissorInnerImg.classList.add("inner-tile-hover");
+}
+
 function gameStartup() {
     let userNameSpan = document.getElementById("users-name");
     userNameSpan.innerHTML = userName;
@@ -99,6 +111,7 @@ function gameStartup() {
 
     setTimeout(function () {
         greenLightOn();
+        turnOnHoverAffect()
         // gameTileEventListeners();
     }, 3000);
 
