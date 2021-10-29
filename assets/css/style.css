@@ -39,7 +39,7 @@ h1 {
     z-index: 10;
 }
 
-close-button {
+#close-button {
     width: 80px;
     background-color: #3b2e27;
     color: white;
@@ -52,6 +52,34 @@ close-button {
 }
 
 #button-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+    background-color: #c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color: #442208
+}
+
+#button-instruction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+    background-color: #c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color: #442208
+}
+
+#button-unknown {
     display: flex;
     justify-content: center;
     align-items: center;
