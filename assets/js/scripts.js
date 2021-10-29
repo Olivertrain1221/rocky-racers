@@ -77,3 +77,29 @@ function greenLightOn() {
     greenLight.style.backgroundColor = "green";
 
 }
+
+function gameStartup() {
+    let userNameSpan = document.getElementById("users-name");
+    userNameSpan.innerHTML = userName;    
+    let scoreBoard = document.getElementById("score-board");
+    scoreBoard.style.display = "flex";
+    let gameTiles = document.getElementsByClassName("rock-paper-scissor-logo")[0];
+    gameTiles.style.display = "flex";
+    let trafficLight = document.getElementById("traffic-light");
+    trafficLight.style.display = "inline-block";
+
+    // time section for traffic light
+    setTimeout(function () {
+        redLightOn();
+    }, 2000);   
+
+    setTimeout(function () {
+        yellowLightOn();
+    }, 2500);
+
+    setTimeout(function () {
+        greenLightOn();
+        // gameTileEventListeners();
+    }, 3000);
+
+}
