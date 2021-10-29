@@ -1,4 +1,4 @@
-// last thing i did was fill the circles.
+// last thing i did was fill the circles for ai selection after game logic i need to create and run remove of the css function.
 // tomrrow add the hand color fill in depending on user selection 
 // then time out for 3 seconds
 // then turn the aiselection on
