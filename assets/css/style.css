@@ -4,6 +4,18 @@ body {
     background-size: auto 100vh;
 }
 
+.grid-container {
+    display: grid;
+    height: 100vh;
+    box-sizing: border-box;
+    grid-template-rows: 10em 5vh auto 15em;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: ". title title ."
+        "traffic-light game-icons game-icons score-boards"
+        "traffic-light game-icons game-icons score-boards"
+        "road road road road";
+}
+
 h1 {
     text-align: center;
     font-family: 'Mukta', sans-serif;
@@ -93,28 +105,32 @@ h1 {
     color: #442208
 }
 
-
 .main-heading {
     text-align: center;
     font-family: 'Mukta', sans-serif;
     font-size: 50px;
+    grid-area: title;
+
 }
 
 #main-container {
     color: white;
     width: 500px;
-    height: 500px;
     margin: 0 auto;
     background-color: #713500;
     text-align: center;
     font-family: 'Mukta', sans-serif;
     font-size: 25px;
+    grid-area: game-icons;
 }
 
 #traffic-light {
     background-color: black;
     margin-left: 50px;
     display: none;
+    grid-area: traffic-light;
+    width: 77px;
+    height: 250px;
 }
 
 #red {
@@ -154,8 +170,6 @@ h1 {
     width: 150px;
     position: relative;
     z-index: 10;
-
-    /* display:none; */
 }
 
 #scissor-image>* {
@@ -178,6 +192,7 @@ h1 {
     width: 150px;
     position: relative;
     z-index: 10;
+
 }
 
 #rock-image {
@@ -185,6 +200,7 @@ h1 {
     width: 150px;
     position: relative;
     z-index: 10;
+
 }
 
 .rock-paper-scissor-logo {
@@ -193,19 +209,20 @@ h1 {
     justify-content: center;
     gap: 10px;
     display: none;
+    grid-area: game-icons;
 }
 
-#score-board {
-    width: 500px;
+.score-board {
     height: 200px;
     background-color: #713500;
     color: white;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     font-family: 'Mukta', sans-serif;
     font-size: 30px;
     border-color: #966036;
+    grid-area: score-boards;
 }
 
 #user-score,
