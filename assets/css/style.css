@@ -92,3 +92,59 @@ h1 {
     font-size: 20px;
     color: #442208
 }
+
+
+.main-heading {
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+    font-size: 50px;
+}
+
+#main-container {
+    color: white;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #713500;
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+    font-size: 25px;
+}
+
+#traffic-light {
+    background-color: black;
+    margin-left: 50px;
+    display: none;
+}
+
+#red {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
+}
+
+#yellow {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
+}
+
+#green {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
+}
+
+.light-surround {
+    border-radius: 50%;
+    border-top: 2px solid rgb(51, 50, 50);
+}
