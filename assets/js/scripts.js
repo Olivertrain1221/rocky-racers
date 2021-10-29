@@ -146,3 +146,53 @@ function aiSelection(user) {
     console.log(ai);
     gameLogic(user, ai);
 }
+
+let aiScoreBoard = document.getElementById("ai-score");
+let userScoreBoard = document.getElementById("user-score");
+let aiScore = 0;
+let userScore = 0;
+
+
+function draw() {
+    console.log("draw");
+    gameStartup();
+}
+
+function win() {
+    console.log("win");
+    userScore++;
+    userScoreBoard.innerHTML = userScore;
+    gameStartup();
+}
+
+function lose() {
+    console.log("lose");
+    aiScore++;
+    aiScoreBoard.innerHTML = aiScore;
+    gameStartup();
+}
+
+
+function gameLogic(user, ai) {
+    if (user === ai) {
+        draw();
+    } else if (user === 'rock') {
+        if (ai === 'paper') {
+            lose();
+        } else {
+            win(); // rock beats scissors
+        }
+    } else if (user === 'paper') {
+        if (ai === 'scissor') {
+            lose();
+        } else {
+            win(); // paper beats rock
+        }
+    } else if (user === 'scissor') {
+        if (ai === 'rock') {
+            lose();
+        } else {
+            win(); // scissors beats paper
+        }
+    }
+}
