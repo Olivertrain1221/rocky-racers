@@ -113,6 +113,7 @@ let scissor = document.getElementById("scissor-image");
 // function gameTileEventListeners() {
 rock.addEventListener("click", function () {
     userSelection("r");
+  
 });
 paper.addEventListener("click", function () {
     userSelection("p");
@@ -139,6 +140,8 @@ function userSelection(tile) {
     // removeGameTileEventListeners();
     aiSelection(user);
 }
+
+
 
 function aiSelection(user) {
     let aiOptions = ["rock", "paper", "scissor"];
