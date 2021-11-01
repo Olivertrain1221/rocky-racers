@@ -1,8 +1,8 @@
-// last thing i did was fill the circles for ai selection after game logic i need to create and run remove of the css function.
-// tomrrow add the hand color fill in depending on user selection 
-// then time out for 3 seconds
-// then turn the aiselection on
-// add tiny png.
+// look at making traffic light better
+// linking the menu button
+// unknown button
+// style the score board
+// read.me to carry on with
 
 
 
@@ -39,8 +39,8 @@ let trafficLight = document.getElementById("traffic-light");
 // playButton.addEventListener("click", getUserName);
 playButton.addEventListener("click", tempStart);
 
-function tempStart(){
-    userName="temp";
+function tempStart() {
+    userName = "temp";
     mainContainer.style.display = "none";
     gameStartup();
 }
@@ -81,14 +81,14 @@ function modalContainerClick(e) {
 
 function winner(result) {
     let winnerMessage = document.getElementById("winner-message");
-    if (result == "win"){
+    if (result == "win") {
         winnerMessage.innerText = "Wahooo Winner"
-    } else if (result== "draw") {
+    } else if (result == "draw") {
         winnerMessage.innerText = "Draww!!!"
     } else if (result == "lose") {
         winnerMessage.innerText = "Loserrrr unlucky!"
     }
-        
+
     console.log(winnerMessage)
 }
 
@@ -109,7 +109,7 @@ function greenLightOn() {
     greenLight.classList.add("green-light-on")
 }
 
-function LightOff(){
+function LightOff() {
     document.getElementById("yellow").classList.remove("yellow-light-on")
     document.getElementById("green").classList.remove("green-light-on");
 }
@@ -144,11 +144,11 @@ function turnOffAiSelectionEffect() {
 // }
 
 // function turnOnUserSelectionEffect(user) {
-   
+
 //     let rockInnerImage = document.getElementById("inner-rock-image");
 //     let paperInnerImage = document.getElementById("inner-paper-image");
 //     let scissorInnerImage = document.getElementById("inner-scissor-image");
-     
+
 //      if (user == "rock") {
 //          rockInnerImage.classList.add("inner-image-fill");
 //          console.log("rock on");
@@ -167,12 +167,12 @@ function turnOffAiSelectionEffect() {
 
 
 function turnOnAiSelectionEffect(ai) {
-   console.log("start aieffect function");
-   console.log(ai);
+    console.log("start aieffect function");
+    console.log(ai);
     let rockOuterCircle = document.getElementById("rock-circle");
     let paperOuterCircle = document.getElementById("paper-circle");
     let scissorOuterCircle = document.getElementById("scissor-circle");
-    
+
     if (ai == "rock") {
         rockOuterCircle.classList.add("outer-circle-fill");
         console.log("rock on");
@@ -186,6 +186,7 @@ function turnOnAiSelectionEffect(ai) {
 }
 
 let svgs = document.querySelectorAll("svg");
+
 function enableGameSvgs() {
     svgs.forEach(svg => {
         svg.classList.remove("disable-svg-effects");
@@ -230,7 +231,7 @@ function trafficLightAnimation() {
         enableGameSvgs();
     }, 3000);
 
-   
+
 }
 
 
@@ -243,10 +244,10 @@ let scissor = document.getElementById("scissor-image");
 rock.addEventListener("click", function () {
     //   toggle class for fill
     //  then time interval before userSelection!!
-    
+
     userSelection("r");
     LightOff();
-    
+
 });
 paper.addEventListener("click", function () {
     userSelection("p");
@@ -273,7 +274,7 @@ function userSelection(tile) {
 
     console.log(user);
     aiSelection(user);
-    
+
 }
 
 
@@ -285,11 +286,11 @@ function aiSelection(user) {
     disableGameSvgs();
     // turnOnUserSelectionEffect(user);
     turnOnAiSelectionEffect(ai);
-    
+
     setTimeout(function () {
         gameLogic(user, ai);
     }, 3000);
-     
+
 
 }
 
@@ -313,7 +314,7 @@ function win() {
     turnOffAiSelectionEffect();
     winner("win");
     gameStartup();
-    
+
 }
 
 function lose() {
