@@ -27,12 +27,23 @@ function openModal() {
     modalContainer.style.display = "block";
 }
 
+
+
 // Getting main container and button elements to link with traffic lights.
 let mainContainer = document.getElementById("main-container");
 let playButton = document.getElementById("button-play");
 let trafficLight = document.getElementById("traffic-light");
 
-playButton.addEventListener("click", getUserName);
+
+// Temporary bypass of username, remove line 40-45 and uncomment below
+// playButton.addEventListener("click", getUserName);
+playButton.addEventListener("click", tempStart);
+
+function tempStart(){
+    userName="temp";
+    mainContainer.style.display = "none";
+    gameStartup();
+}
 
 
 function getUserName() {
@@ -103,6 +114,7 @@ function turnOffAiSelectionEffect() {
     paperOuterCircle.classList.remove("outer-circle-fill");
     scissorOuterCircle.classList.remove("outer-circle-fill");
 }
+
 
 
 
