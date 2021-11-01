@@ -84,6 +84,19 @@ function greenLightOn() {
 
 }
 
+function turnOffAiSelectionEffect() {
+    let rockOuterCircle = document.getElementById("rock-circle");
+    let paperOuterCircle = document.getElementById("paper-circle");
+    let scissorOuterCircle = document.getElementById("scissor-circle");
+
+    rockOuterCircle.classList.add("outer-circle-fill");
+    paperOuterCircle.classList.add("outer-circle-fill");
+    scissorOuterCircle.classList.add("outer-circle-fill");
+
+    rockOuterCircle.classList.remove("outer-circle-fill");
+    paperOuterCircle.classList.remove("outer-circle-fill");
+    scissorOuterCircle.classList.remove("outer-circle-fill");
+}
 
 function turnOnAiSelectionEffect(ai) {
    console.log("start aieffect function");
@@ -190,7 +203,8 @@ function aiSelection(user) {
     turnOnAiSelectionEffect(ai);
     setTimeout(function () {
         gameLogic(user, ai);
-    }, 3000);   
+    }, 3000);
+     
 
 }
 
@@ -202,6 +216,7 @@ let userScore = 0;
 
 function draw() {
     console.log("draw");
+    turnOffAiSelectionEffect();
     gameStartup();
 }
 
@@ -209,13 +224,16 @@ function win() {
     console.log("win");
     userScore++;
     userScoreBoard.innerHTML = userScore;
+    turnOffAiSelectionEffect();
     gameStartup();
+    
 }
 
 function lose() {
     console.log("lose");
     aiScore++;
     aiScoreBoard.innerHTML = aiScore;
+    turnOffAiSelectionEffect();
     gameStartup();
 }
 
