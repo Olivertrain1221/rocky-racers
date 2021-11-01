@@ -2,6 +2,8 @@
 // tomrrow add the hand color fill in depending on user selection 
 // then time out for 3 seconds
 // then turn the aiselection on
+// add tiny png.
+
 
 
 let userName = "";
@@ -69,19 +71,23 @@ function modalContainerClick(e) {
 
 function redLightOn() {
     let redLight = document.getElementById("red");
-    redLight.style.backgroundColor = "red";
+    redLight.classList.add("red-light-on")
 }
 
 function yellowLightOn() {
     let yellowLight = document.getElementById("yellow");
-    yellowLight.style.backgroundColor = "yellow";
+    yellowLight.classList.add("yellow-light-on")
 
 }
 
 function greenLightOn() {
     let greenLight = document.getElementById("green");
-    greenLight.style.backgroundColor = "green";
+    greenLight.classList.add("green-light-on")
+}
 
+function LightOff(){
+    document.getElementById("yellow").classList.remove("yellow-light-on")
+    document.getElementById("green").classList.remove("green-light-on");
 }
 
 function turnOffAiSelectionEffect() {
@@ -97,6 +103,10 @@ function turnOffAiSelectionEffect() {
     paperOuterCircle.classList.remove("outer-circle-fill");
     scissorOuterCircle.classList.remove("outer-circle-fill");
 }
+
+
+
+
 
 function turnOnAiSelectionEffect(ai) {
    console.log("start aieffect function");
@@ -117,16 +127,21 @@ function turnOnAiSelectionEffect(ai) {
     }
 }
 
-function turnOnHoverAffect() {
-
-    let rockInnerImg = document.getElementById("inner-rock-image");
-    let paperInnerImg = document.getElementById("inner-paper-image");
-    let scissorInnerImg = document.getElementById("inner-scissor-image");
-    
-    rockInnerImg.classList.add("inner-tile-hover");
-    paperInnerImg.classList.add("inner-tile-hover");
-    scissorInnerImg.classList.add("inner-tile-hover");
+let svgs = document.querySelectorAll("svg");
+function enableGameSvgs() {
+    svgs.forEach(svg => {
+        svg.classList.remove("disable-svg-effects");
+    });
 }
+
+function disableGameSvgs() {
+    svgs.forEach(svg => {
+        svg.classList.add("disable-svg-effects");
+    });
+}
+
+
+
 
 function gameStartup() {
     let userNameSpan = document.getElementById("users-name");
@@ -135,6 +150,11 @@ function gameStartup() {
     scoreBoard.style.display = "flex";
     let gameTiles = document.getElementsByClassName("rock-paper-scissor-logo")[0];
     gameTiles.style.display = "flex";
+    trafficLightAnimation();
+}
+
+
+function trafficLightAnimation() {
     let trafficLight = document.getElementById("traffic-light");
     trafficLight.style.display = "inline-block";
 
@@ -149,9 +169,10 @@ function gameStartup() {
 
     setTimeout(function () {
         greenLightOn();
-        turnOnHoverAffect()
+        enableGameSvgs();
     }, 3000);
 
+   
 }
 
 
@@ -166,13 +187,16 @@ rock.addEventListener("click", function () {
     //  then time interval before userSelection!!
     
     userSelection("r");
-
+    LightOff();
+    
 });
 paper.addEventListener("click", function () {
     userSelection("p");
+    LightOff();
 });
 scissor.addEventListener("click", function () {
     userSelection("s");
+    LightOff();
 });
 
 
@@ -200,6 +224,7 @@ function aiSelection(user) {
     let aiOptions = ["rock", "paper", "scissor"];
     let ai = aiOptions[Math.floor(Math.random() * 3)];
     console.log(ai);
+    disableGameSvgs();
     turnOnAiSelectionEffect(ai);
     setTimeout(function () {
         gameLogic(user, ai);

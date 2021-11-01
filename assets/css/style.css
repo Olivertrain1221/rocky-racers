@@ -16,9 +16,9 @@ body {
         "road road road road";
 }
 
-.inner-tile-hover:hover {
+/* .inner-tile-hover:hover {
     fill:rgb(0, 255, 255);
-}
+} */
 
 .outer-circle-fill {
     fill: blue;
@@ -58,6 +58,18 @@ h1 {
     position: relative;
     z-index: 10;
 }
+
+.svg:hover > path {
+    fill:rgb(0, 255, 255);
+
+}
+
+
+.disable-svg-effects {
+    pointer-events: none;
+    
+}
+
 
 #close-button {
     width: 80px;
@@ -132,6 +144,27 @@ h1 {
     grid-area: game-icons;
 }
 
+
+.traffic-light {
+    background-color: rgb(20, 20, 20);
+}
+
+
+.red-light-on {
+    background-color: red;
+}
+
+.yellow-light-on {
+    background-color: yellow;
+}
+
+.green-light-on {
+    background-color: green;
+}
+
+
+
+
 #traffic-light {
     background-color: black;
     margin-left: 50px;
@@ -145,7 +178,6 @@ h1 {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: transparent;
     border-style: solid;
     border-color: black;
 }
@@ -154,7 +186,6 @@ h1 {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: transparent;
     border-style: solid;
     border-color: black;
 }
@@ -163,7 +194,6 @@ h1 {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: transparent;
     border-style: solid;
     border-color: black;
 }
