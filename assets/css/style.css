@@ -63,7 +63,7 @@ h1 {
 }
 
 .svg:hover>path {
-    fill: rgb(11, 107, 2);
+    fill: rgb(199, 196, 0);
 
 }
 
@@ -206,6 +206,9 @@ h1 {
     border-top: 2px solid rgb(51, 50, 50);
 }
 
+.inner-image-fill {
+    fill: green;
+}
 
 #scissor-circle {
     height: 100%;
@@ -277,15 +280,16 @@ h1 {
 
 .score-board {
     height: 200px;
-    background-color: #713500;
-    color: white;
+    background-color: #a15d21;
+    color: rgb(255, 255, 255);
     display: none;
     align-items: center;
     justify-content: center;
     font-family: 'Mukta', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     border-color: #966036;
     grid-area: score-boards;
+    
 }
 
 #user-score,

@@ -128,43 +128,6 @@ function turnOffAiSelectionEffect() {
     scissorOuterCircle.classList.remove("outer-circle-fill");
 }
 
-// function turnOffUserSelectionEffect() {
-//     let rockInnerImage = document.getElementById("inner-rock-image");
-//     let paperInnerImage = document.getElementById("inner-paper-image");
-//     let scissorInnerImage = document.getElementById("inner-scissor-image");
-
-//     rockInnerImage.classList.add("inner-image-fill");
-//     paperInnerImage.classList.add("inner-image-fill");
-//     scissorInnerImage.classList.add("inner-image-fill");
-
-//     rockInnerImage.classList.remove("inner-image-fill");
-//     paperInnerImage.classList.remove("inner-image-fill");
-//     scissorInnerImage.classList.remove("inner-image-fill");
-
-// }
-
-// function turnOnUserSelectionEffect(user) {
-
-//     let rockInnerImage = document.getElementById("inner-rock-image");
-//     let paperInnerImage = document.getElementById("inner-paper-image");
-//     let scissorInnerImage = document.getElementById("inner-scissor-image");
-
-//      if (user == "rock") {
-//          rockInnerImage.classList.add("inner-image-fill");
-//          console.log("rock on");
-//      } else if (user == "paper") {
-//          paperInnerImage.classList.add("inner-image-fill");
-//          console.log("paper on");
-//      } else if (user == "scissor") {
-//          scissorInnerImage.classList.add("inner-image-fill");
-//          console.log("scissor on");
-//      }
-//  }
-
-
-
-
-
 
 function turnOnAiSelectionEffect(ai) {
     console.log("start aieffect function");
@@ -198,6 +161,7 @@ function disableGameSvgs() {
         svg.classList.add("disable-svg-effects");
     });
 }
+
 
 
 
@@ -259,17 +223,23 @@ scissor.addEventListener("click", function () {
 });
 
 
+let rockInnerCircle = document.getElementById("inner-rock-image");
+let paperInnerCircle = document.getElementById("inner-paper-image");
+let scissorInnerCircle = document.getElementById("inner-scissor-image");
 
 function userSelection(tile) {
     console.log(tile);
     let user = "";
     if (tile == "r") {
         user = "rock";
+        rockInnerCircle.classList.add("inner-image-fill")
         console.log("rock test");
     } else if (tile == "p") {
         user = "paper";
+        paperInnerCircle.classList.add("inner-image-fill")
     } else if (tile == "s") {
         user = "scissor";
+        scissorInnerCircle.classList.add("inner-image-fill")
     }
 
     console.log(user);
@@ -284,7 +254,6 @@ function aiSelection(user) {
     let ai = aiOptions[Math.floor(Math.random() * 3)];
     console.log(ai);
     disableGameSvgs();
-    // turnOnUserSelectionEffect(user);
     turnOnAiSelectionEffect(ai);
 
     setTimeout(function () {
@@ -299,10 +268,16 @@ let userScoreBoard = document.getElementById("user-score");
 let aiScore = 0;
 let userScore = 0;
 
+function removeUserSelectionColor() {
+    paperInnerCircle.classList.remove("inner-image-fill");
+    rockInnerCircle.classList.remove("inner-image-fill");
+    scissorInnerCircle.classList.remove("inner-image-fill");
+}
 
 function draw() {
     console.log("draw");
     turnOffAiSelectionEffect();
+    removeUserSelectionColor();
     winner("draw");
     gameStartup();
 }
@@ -312,6 +287,7 @@ function win() {
     userScore++;
     userScoreBoard.innerHTML = userScore;
     turnOffAiSelectionEffect();
+    removeUserSelectionColor();
     winner("win");
     gameStartup();
 
@@ -322,6 +298,7 @@ function lose() {
     aiScore++;
     aiScoreBoard.innerHTML = aiScore;
     turnOffAiSelectionEffect();
+    removeUserSelectionColor();
     winner("lose");
     gameStartup();
 }
