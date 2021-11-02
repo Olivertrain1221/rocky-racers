@@ -11,12 +11,16 @@ let userName = "";
 let modalContainer = document.getElementById("modal-container");
 let buttonInstruction = document.getElementById("button-instruction");
 let closeInstructionButton = document.getElementById("close-button");
-
+let mainMenuButton = document.getElementById("button-menu")
 
 // modalContainers event listeners to open/close
 buttonInstruction.addEventListener("click", openModal);
 closeInstructionButton.addEventListener("click", closeModal);
+mainMenuButton.addEventListener("click", mainMenu)
 
+function mainMenu() {
+    gameStartup();
+}
 
 // Event listener for whole window to run the modalContainerClick func.
 window.addEventListener("click", modalContainerClick);
