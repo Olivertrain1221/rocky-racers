@@ -82,10 +82,19 @@ function modalContainerClick(e) {
 function winner(result) {
     let winnerMessage = document.getElementById("winner-message");
     if (result == "win") {
+        winnerMessage.classList.add("win-message")
+        winnerMessage.classList.remove("lose-message")
+        winnerMessage.classList.remove("draw-message")
         winnerMessage.innerText = "Wahooo Winner"
     } else if (result == "draw") {
+        winnerMessage.classList.add("draw-message")
+        winnerMessage.classList.remove("win-message")
+        winnerMessage.classList.remove("lose-message")
         winnerMessage.innerText = "Draww!!!"
     } else if (result == "lose") {
+        winnerMessage.classList.add("lose-message")
+        winnerMessage.classList.remove("draw-message")
+        winnerMessage.classList.remove("win-message")
         winnerMessage.innerText = "Loserrrr unlucky!"
     }
 
@@ -279,6 +288,7 @@ function draw() {
     turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("draw");
+    winner("draw")
     gameStartup();
 }
 
