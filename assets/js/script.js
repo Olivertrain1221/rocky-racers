@@ -1,6 +1,9 @@
 // linking the menu button
 // unknown button
-// style the score board
+// style the score board change colors to do
+// readme to do
+// media queries
+// 
 // read.me to carry on with
 
 
@@ -19,7 +22,7 @@ closeInstructionButton.addEventListener("click", closeModal);
 mainMenuButton.addEventListener("click", mainMenu)
 
 function mainMenu() {
-    gameStartup();
+    modalContainer();
 }
 
 // Event listener for whole window to run the modalContainerClick func.
