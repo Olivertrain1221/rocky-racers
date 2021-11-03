@@ -14,11 +14,11 @@ let userName = "";
 let modalContainer = document.getElementById("modal-container");
 let buttonInstruction = document.getElementById("button-instruction");
 let closeInstructionButton = document.getElementById("close-button");
-let mainMenuButton = document.getElementById("button-menu")
+let nightButton = document.getElementById("night-button")
 // modalContainers event listeners to open/close
 closeInstructionButton.addEventListener("click", closeModal);
 buttonInstruction.addEventListener("click", openModal);
-mainMenuButton.addEventListener("click", nightMode());
+nightButton.addEventListener("click", nightMode());
 
 
 
@@ -26,8 +26,8 @@ mainMenuButton.addEventListener("click", nightMode());
 window.addEventListener("click", modalContainerClick);
  
 function nightMode(){
-     mainMenuButton.classList.add("night-background")
-     mainMenuButton.classList.remove("body")
+     nightButton.classList.add("night-background")
+     nightButton.classList.remove("body")
 }
 
 // Opens the instruction modal
