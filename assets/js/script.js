@@ -15,18 +15,20 @@ let modalContainer = document.getElementById("modal-container");
 let buttonInstruction = document.getElementById("button-instruction");
 let closeInstructionButton = document.getElementById("close-button");
 let mainMenuButton = document.getElementById("button-menu")
-
 // modalContainers event listeners to open/close
-buttonInstruction.addEventListener("click", openModal);
 closeInstructionButton.addEventListener("click", closeModal);
-mainMenuButton.addEventListener("click", mainMenu)
+buttonInstruction.addEventListener("click", openModal);
+mainMenuButton.addEventListener("click", nightMode());
 
-function mainMenu() {
-    modalContainer();
-}
+
 
 // Event listener for whole window to run the modalContainerClick func.
 window.addEventListener("click", modalContainerClick);
+ 
+function nightMode(){
+     mainMenuButton.classList.add("night-background")
+     mainMenuButton.classList.remove("body")
+}
 
 // Opens the instruction modal
 function openModal() {
@@ -187,7 +189,7 @@ function disableGameSvgs() {
 }
 
 // Starts the game
-function gameStartup() {
+function gameStartup(mainMenu) {
     let userNameSpan = document.getElementById("users-name");
     userNameSpan.innerHTML = userName;
     let scoreBoard = document.getElementById("score-board");
