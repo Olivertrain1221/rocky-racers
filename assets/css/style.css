@@ -1,9 +1,11 @@
 /* Main body style */
+/* add in the day back ground still */
 body {
-    background-image: url("../images/raceroad.jpg");
     background-repeat: no-repeat;
     background-size: auto 100vh;
+    background-image: url("../images/raceroad.jpg");
 }
+   
 
 .night-background {
     background-image: url("../images/raceroad-night.jpg");
@@ -152,6 +154,20 @@ h1 {
 
 }
 
+.night-day-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background-color: #c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color: #442208
+}
 #main-container {
     color: white;
     width: 500px;
@@ -163,6 +179,19 @@ h1 {
     grid-area: game-icons;
 }
 
+.traffic-light-at-night {
+    border: solid 5px rgb(34, 34, 34);
+}
+
+/* hidden */
+.hidden {
+    display: none;
+}
+
+/* inline block */
+.inline-block{
+    display: inline-block;
+}
 
 /* Traffic light background div */
 .traffic-light {
@@ -188,11 +217,11 @@ h1 {
 #traffic-light {
     background-color: black;
     margin-left: 50px;
-    display: none;
     grid-area: traffic-light;
     width: 77px;
     height: 250px;
 }
+
 
 /* Win Message colors */
 .win-message {
@@ -320,7 +349,6 @@ h1 {
     height: 200px;
     background-color: #a15d21;
     color: rgb(255, 255, 255);
-    display: none;
     align-items: center;
     justify-content: center;
     font-family: 'Mukta', sans-serif;

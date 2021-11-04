@@ -6,28 +6,14 @@
 // 
 // read.me to carry on with
 
+const resetClassList = (elm, initialClassList) => {
+    elm.classList = "";
+    initialClassList.forEach((className)=> elm.classList.add(className));
+}
 
-
-let userName = "";
-
-// Modal container element assignement
-let modalContainer = document.getElementById("modal-container");
-let buttonInstruction = document.getElementById("button-instruction");
-let closeInstructionButton = document.getElementById("close-button");
-let nightButton = document.getElementById("night-button")
-// modalContainers event listeners to open/close
-closeInstructionButton.addEventListener("click", closeModal);
-buttonInstruction.addEventListener("click", openModal);
-nightButton.addEventListener("click", nightMode());
-
-
-
-// Event listener for whole window to run the modalContainerClick func.
-window.addEventListener("click", modalContainerClick);
- 
 function nightMode(){
-     nightButton.classList.add("night-background")
-     nightButton.classList.remove("body")
+    bodyTag.classList.toggle("night-background");
+    trafficLight.classList.add("traffic-light-at-night");
 }
 
 // Opens the instruction modal
@@ -35,11 +21,39 @@ function openModal() {
     modalContainer.style.display = "block";
 }
 
+let userName = "";
+
+function closeModal() {
+    modalContainer.style.display = "none";
+}
+// Modal container element assignement
+
+let bodyTag = document.getElementsByTagName("body")[0];
+let modalContainer = document.getElementById("modal-container");
+let buttonInstruction = document.getElementById("button-instruction");
+let closeInstructionButton = document.getElementById("close-button");
+let nightButton = document.getElementById("night-button");
+let mainMenuButton = document.getElementById("menu-button");
+// modalContainers event listeners to open/close
+closeInstructionButton.addEventListener("click", closeModal);
+buttonInstruction.addEventListener("click", openModal);
+nightButton.addEventListener("click", nightMode);
+mainMenuButton.addEventListener("click", mainMenuReset);
+
+function mainMenuReset(){
+    resetClassList(trafficLight, scoreBoard ["traffic-light ", "hidden"]);
+};
+
+// Event listener for whole window to run the modalContainerClick func.
+window.addEventListener("click", modalContainerClick);
+ 
+
 
 
 // Getting main container and button elements to link with traffic lights.
 let mainContainer = document.getElementById("main-container");
 let playButton = document.getElementById("button-play");
+console.log("playbutton", playButton);
 let trafficLight = document.getElementById("traffic-light");
 
 
@@ -48,6 +62,7 @@ let trafficLight = document.getElementById("traffic-light");
 playButton.addEventListener("click", tempStart);
 
 function tempStart() {
+    console.log("tempStart")
     userName = "temp";
     mainContainer.style.display = "none";
     gameStartup();
@@ -77,10 +92,6 @@ function getUserName() {
 };
 
 // Closes the modal upon event
-function closeModal() {
-    modalContainer.style.display = "none";
-    console.log("testing button")
-}
 
 // Closes the instructions modal
 function modalContainerClick(e) {
@@ -202,7 +213,8 @@ function gameStartup(mainMenu) {
 // Adds the time sequence
 function trafficLightAnimation() {
     let trafficLight = document.getElementById("traffic-light");
-    trafficLight.style.display = "inline-block";
+    trafficLight.classList.add("inline-block");
+    trafficLight.classList.remove("hidden");
 
     // Time section for traffic light
     setTimeout(function () {
@@ -351,3 +363,4 @@ function gameLogic(user, ai) {
         }
     }
 }
+

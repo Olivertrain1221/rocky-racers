@@ -17,7 +17,7 @@
 
         <h1 class="main-heading">Rocky Racers</h1>
         <!-- Traffic light and bulbs -->
-        <section id="traffic-light" class="traffic-lights disable-traffic">
+        <section id="traffic-light" class="traffic-lights hidden disable-traffic">
             <div class="light-surround">
                 <div id="red" class="traffic-light"></div>
             </div>
@@ -84,11 +84,13 @@
         </section>
 
         <!-- Score board  -->
-        <span class="score-board" id="score-board">
-            <button id="night-button">Main Menu</button>
+        <span class="score-board hidden inline-block" id="score-board">
+            <button id="menu-button" >Main Menu</button>
+            <button id="night-button" class="night-day-button">Night/Day</button>
             <div id="text-for-score-bored">
                 <span id="users-name"></span>:
-                <span id="user-score">0 </span> VS Comp:
+                <span id="user-score">0 </span> 
+                VS Comp:
                 <span id="ai-score">0</span>
                 <div class="win-message" id="winner-message"></div>
             </div>
@@ -111,6 +113,7 @@
                 Paper beats Rock.
                 Remember that you can only select your option when the traffic light turns to green
                 Now that we have that cleared up let I will see you on the track!!
+                Also If you fancy playing in a night theme then click the Night/Day button.
                 <button id="close-button">Close</button>
             </div>
         </aside>
