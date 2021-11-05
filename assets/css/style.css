@@ -129,6 +129,19 @@ h1 {
     color: #442208
 }
 
+.main-menu-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 0px;
+    margin-left: 110px;
+    margin-top: 30px;
+    background-color: #c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color: #442208
+}
 #button-unknown {
     display: flex;
     justify-content: center;
@@ -365,4 +378,6 @@ h1 {
     margin-left: 20px;
     margin-right: 20px;
     font-family: 'Mukta', sans-serif;
+    display: flex;
+    justify-content: center;
 }
