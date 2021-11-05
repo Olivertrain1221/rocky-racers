@@ -6,6 +6,9 @@
 // 
 // read.me to carry on with
 
+// reove scoreboard and display the being container
+// 
+
 const resetClassList = (elm, initialClassList) => {
     elm.classList = "";
     initialClassList.forEach((className)=> elm.classList.add(className));
@@ -15,7 +18,7 @@ function nightMode(){
     bodyTag.classList.toggle("night-background");
     trafficLight.classList.add("traffic-light-at-night");
 }
-
+// TODO: comeback and fix me !!!!!
 // Opens the instruction modal
 function openModal() {
     modalContainer.style.display = "block";
@@ -23,6 +26,8 @@ function openModal() {
 
 let userName = "";
 
+
+// TODO: comeback and fix me !!!!!
 function closeModal() {
     modalContainer.style.display = "none";
 }
@@ -38,11 +43,15 @@ let mainMenuButton = document.getElementById("menu-button");
 closeInstructionButton.addEventListener("click", closeModal);
 buttonInstruction.addEventListener("click", openModal);
 nightButton.addEventListener("click", nightMode);
-mainMenuButton.addEventListener("click", mainMenuReset);
+mainMenuButton.addEventListener("click", mainMenuReset) ;
 
 function mainMenuReset(){
-    resetClassList(trafficLight, scoreBoard ["traffic-light ", "hidden"]);
-};
+    let gameLogos = document.getElementsByClassName("rock-paper-scissor-logo")[0];
+    gameLogos.classList.remove("flex");
+    trafficLight.classList.remove("inline-block");
+    scoreBoard.classList.remove("flex")
+
+}
 
 // Event listener for whole window to run the modalContainerClick func.
 window.addEventListener("click", modalContainerClick);
@@ -199,14 +208,15 @@ function disableGameSvgs() {
     });
 }
 
+// change style to classses that apply flex.
 // Starts the game
+let scoreBoard = document.getElementById("score-board");
 function gameStartup(mainMenu) {
     let userNameSpan = document.getElementById("users-name");
     userNameSpan.innerHTML = userName;
-    let scoreBoard = document.getElementById("score-board");
-    scoreBoard.style.display = "flex";
     let gameTiles = document.getElementsByClassName("rock-paper-scissor-logo")[0];
-    gameTiles.style.display = "flex";
+    gameTiles.classList.add("flex");
+    scoreBoard.classList.add("flex");
     trafficLightAnimation();
 }
 
@@ -214,7 +224,7 @@ function gameStartup(mainMenu) {
 function trafficLightAnimation() {
     let trafficLight = document.getElementById("traffic-light");
     trafficLight.classList.add("inline-block");
-    trafficLight.classList.remove("hidden");
+    
 
     // Time section for traffic light
     setTimeout(function () {

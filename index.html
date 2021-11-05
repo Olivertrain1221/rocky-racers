@@ -37,8 +37,8 @@
             <button id="button-unknown">Unknown yet</button>
         </section>
 
-        <section class="rock-paper-scissor-logo">
-            
+        <section class="rock-paper-scissor-logo hidden">
+
             <!-- Rock image -->
             <div class="tile-container">
                 <svg id="rock-image" class="svg disable-svg-effects" viewBox="0 0 521 521" fill="none"
@@ -52,7 +52,7 @@
                 <!-- Pole image -->
                 <div class="pole"></div>
             </div>
-            
+
             <!-- Paper Image -->
             <div class="tile-container">
                 <svg id="paper-image" class="svg disable-svg-effects" viewBox="0 0 521 521" fill="none"
@@ -84,12 +84,12 @@
         </section>
 
         <!-- Score board  -->
-        <span class="score-board hidden inline-block" id="score-board">
-            <button id="menu-button" >Main Menu</button>
+        <span class="score-board hidden" id="score-board">
+            <button id="menu-button">Main Menu</button>
             <button id="night-button" class="night-day-button">Night/Day</button>
             <div id="text-for-score-bored">
                 <span id="users-name"></span>:
-                <span id="user-score">0 </span> 
+                <span id="user-score">0 </span>
                 VS Comp:
                 <span id="ai-score">0</span>
                 <div class="win-message" id="winner-message"></div>
@@ -99,7 +99,7 @@
         <section>
             <div></div>
         </section>
-        
+
         <!-- Modal out container and inner container -->
         <aside id="modal-container" class="modal-container">
             <div id="modal-inner-container" class="modal-inner-container">

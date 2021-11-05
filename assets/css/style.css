@@ -188,6 +188,10 @@ h1 {
     display: none;
 }
 
+/* Displaying Flex */
+.flex {
+    display: flex;
+}
 /* inline block */
 .inline-block{
     display: inline-block;
@@ -336,11 +340,9 @@ h1 {
 }
 
 .rock-paper-scissor-logo {
-    display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    display: none;
     grid-area: game-icons;
 }
 
