@@ -21,7 +21,7 @@ function nightMode(){
 // TODO: comeback and fix me !!!!!
 // Opens the instruction modal
 function openModal() {
-    modalContainer.style.display = "block";
+    modalContainer.classList.remove("hidden")
 }
 
 let userName = "";
@@ -43,15 +43,12 @@ let mainMenuButton = document.getElementById("menu-button");
 closeInstructionButton.addEventListener("click", closeModal);
 buttonInstruction.addEventListener("click", openModal);
 nightButton.addEventListener("click", nightMode);
-mainMenuButton.addEventListener("click", mainMenuReset) ;
+mainMenuButton.addEventListener("click", mainMenuReset);
 
 function mainMenuReset(){
-    let gameLogos = document.getElementsByClassName("rock-paper-scissor-logo")[0];
-    gameLogos.classList.remove("flex");
-    trafficLight.classList.remove("inline-block");
-    scoreBoard.classList.remove("flex")
-
+    location.reload();
 }
+
 
 // Event listener for whole window to run the modalContainerClick func.
 window.addEventListener("click", modalContainerClick);
@@ -73,7 +70,7 @@ playButton.addEventListener("click", tempStart);
 function tempStart() {
     console.log("tempStart")
     userName = "temp";
-    mainContainer.style.display = "none";
+    mainContainer.classList.add("hidden");
     gameStartup();
 }
 
