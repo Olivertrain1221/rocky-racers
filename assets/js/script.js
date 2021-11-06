@@ -1,13 +1,9 @@
-// linking the menu button
-// unknown button
+// change unknown button
+
 // style the score board change colors to do
 // readme to do
 // media queries
-// 
-// read.me to carry on with
-
-// reove scoreboard and display the being container
-// 
+ 
 
 const resetClassList = (elm, initialClassList) => {
     elm.classList = "";
