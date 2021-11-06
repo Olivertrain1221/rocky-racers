@@ -1,6 +1,3 @@
-// change unknown button
-
-// style the score board change colors to do
 // readme to do
 // media queries
  
