@@ -15,7 +15,7 @@ function nightMode() {
 // TODO: comeback and fix me !!!!!
 // Opens the instruction modal
 function openModal() {
-    modalContainer.classList.remove("hidden")
+    modalContainer.style.display = "block";
 
 }
 
@@ -33,7 +33,6 @@ buttonSettings.addEventListener("click", openSettingsModal);
 
 function openSettingsModal() {
     let settingsModal = document.getElementById("settings-modal");
-    // settingsModal.classList.remove("hidden");
     settingsModal.style.display = "block";
 }
 

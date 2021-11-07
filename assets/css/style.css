@@ -79,6 +79,21 @@ h1 {
     justify-content: space-around;
 }
 
+.settings-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background-color: #c9804a;
+    border-color: #966036;
+    font-size: 20px;
+    color: #442208
+}
+
 .settings-modal-column {
     text-align: center; 
 }
@@ -98,7 +113,7 @@ h1 {
     display: inline-block;
     width: 70px;
     height: 30px;
-    background: black;
+    background: #442208;
     cursor: pointer;
     border-radius: 15px;
     overflow: hidden;
@@ -110,7 +125,7 @@ h1 {
     position: absolute;
     top: 2px;
     left: 2px;
-    background: white;
+    background: #c9804a;
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -126,7 +141,7 @@ h1 {
     position: absolute;
     top: 2px;
     right: 2px;
-    background: white;
+    background: #c9804a;
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -188,7 +203,7 @@ h1 {
     height: 60px;
     width: 300px;
     margin-left: 110px;
-    margin-top: 70px;
+    margin-top: 30px;
     background-color: #c9804a;
     border-color: #966036;
     font-size: 20px;
@@ -204,20 +219,6 @@ h1 {
     margin-bottom: 48px;
     margin-left: 10px;
     margin-top: 30px;
-    background-color: #c9804a;
-    border-color: #966036;
-    font-size: 20px;
-    color: #442208
-}
-#button-quick-game {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 300px;
-    margin-left: 110px;
-    margin-top: 30px;
-    margin-bottom: 40px;
     background-color: #c9804a;
     border-color: #966036;
     font-size: 20px;
