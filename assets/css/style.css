@@ -39,7 +39,7 @@ h1 {
     font-size: 50px;
 }
 
-
+/* change to hidden in html */
 /* modal container element */
 .modal-container {
     background-color: rgba(0, 0, 0, 0.5);
@@ -72,6 +72,18 @@ h1 {
     font-size: 20px;
     position: relative;
     z-index: 10;
+}
+
+#settings-container {
+    display: flex; 
+}
+
+
+#night-day-checkbox {
+
+}
+#rounds-checkbox {
+
 }
 
 /* Hover effect on game tiles */
@@ -143,7 +155,7 @@ h1 {
     font-size: 20px;
     color: #442208
 }
-#button-unknown {
+#button-quick-game {
     display: flex;
     justify-content: center;
     align-items: center;

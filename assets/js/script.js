@@ -15,16 +15,58 @@ function nightMode(){
 // Opens the instruction modal
 function openModal() {
     modalContainer.classList.remove("hidden")
+
 }
 
 let userName = "";
-
+let settingsCloseButton = document.getElementById("settings-close-button");
+settingsCloseButton.addEventListener("click", closeSettingsModal);
 
 // TODO: comeback and fix me !!!!!
 function closeModal() {
     modalContainer.style.display = "none";
 }
 // Modal container element assignement
+let buttonSettings = document.getElementById("button-settings")
+buttonSettings.addEventListener("click", openSettingsModal);
+
+function openSettingsModal(){
+    let settingsModal = document.getElementById("settings-modal");
+    // settingsModal.classList.remove("hidden");
+    settingsModal.style.display = "block";
+}
+
+function closeSettingsModal(){
+    let settingsModal = document.getElementById("settings-modal");
+    // settingsModal.classList.add("hidden");
+    settingsModal.style.display = "none";
+}
+
+
+
+
+// function bestOfThree(){
+// let userNameSpan = document.getElementById("users-name");
+//     userNameSpan.innerHTML = userName;
+//     let gameTiles = document.getElementsByClassName("rock-paper-scissor-logo")[0];
+//     gameTiles.classList.add("flex");
+//     scoreBoard.classList.add("flex");
+//     trafficLightAnimation();
+// }
+
+
+// function tempStart2() {
+//     console.log("tempStart")
+//     userName = "temp";
+//     mainContainer.classList.add("hidden");
+//     bestOfThree();
+// }
+
+
+
+
+
+
 
 let bodyTag = document.getElementsByTagName("body")[0];
 let modalContainer = document.getElementById("modal-container");
@@ -40,7 +82,7 @@ mainMenuButton.addEventListener("click", mainMenuReset);
 
 function mainMenuReset(){
     location.reload();
-}
+}    
 
 
 // Event listener for whole window to run the modalContainerClick func.
@@ -341,6 +383,30 @@ function draw() {
 
 // Game logic comparing user and ai 
 function gameLogic(user, ai) {
+    if (user === ai) {
+        draw();
+    } else if (user === 'rock') {
+        if (ai === 'paper') {
+            lose();
+        } else {
+            win(); // rock beats scissors
+        }
+    } else if (user === 'paper') {
+        if (ai === 'scissor') {
+            lose();
+        } else {
+            win(); // paper beats rock
+        }
+    } else if (user === 'scissor') {
+        if (ai === 'rock') {
+            lose();
+        } else {
+            win(); // scissors beats paper
+        }
+    }
+}
+
+function gameLogicBestOfFive(user, ai) {
     if (user === ai) {
         draw();
     } else if (user === 'rock') {
