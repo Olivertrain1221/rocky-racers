@@ -1,13 +1,14 @@
 // readme to do
 // media queries
- 
+
+let roundsWanted = "3";
 
 const resetClassList = (elm, initialClassList) => {
     elm.classList = "";
-    initialClassList.forEach((className)=> elm.classList.add(className));
+    initialClassList.forEach((className) => elm.classList.add(className));
 }
 
-function nightMode(){
+function nightMode() {
     bodyTag.classList.toggle("night-background");
     trafficLight.classList.add("traffic-light-at-night");
 }
@@ -30,13 +31,13 @@ function closeModal() {
 let buttonSettings = document.getElementById("button-settings")
 buttonSettings.addEventListener("click", openSettingsModal);
 
-function openSettingsModal(){
+function openSettingsModal() {
     let settingsModal = document.getElementById("settings-modal");
     // settingsModal.classList.remove("hidden");
     settingsModal.style.display = "block";
 }
 
-function closeSettingsModal(){
+function closeSettingsModal() {
     let settingsModal = document.getElementById("settings-modal");
     // settingsModal.classList.add("hidden");
     settingsModal.style.display = "none";
@@ -46,24 +47,27 @@ let nightDayToggle = document.getElementById("night-day-checkbox");
 nightDayToggle.addEventListener("change", nightMode);
 
 
+let roundsToggle = document.getElementById("rounds-checkbox");
 
+roundsToggle.addEventListener("change", function(e) {
+    if (roundsToggle.checked) {
+        roundsWanted = "5";
+        console.log(roundsWanted);
+    } else {
+        roundsWanted = "3";
+        console.log(roundsWanted);
+    }
+});
 
-// function bestOfThree(){
-// let userNameSpan = document.getElementById("users-name");
-//     userNameSpan.innerHTML = userName;
-//     let gameTiles = document.getElementsByClassName("rock-paper-scissor-logo")[0];
-//     gameTiles.classList.add("flex");
-//     scoreBoard.classList.add("flex");
-//     trafficLightAnimation();
-// }
-
-
-// function tempStart2() {
-//     console.log("tempStart")
-//     userName = "temp";
-//     mainContainer.classList.add("hidden");
-//     bestOfThree();
-// }
+function checkWinner() {
+    if (userScoreBoard.innerHTML == roundsWanted) {
+        // what if user wins??? what is it to do
+        location.reload();
+    } else if (aiScoreBoard.innerHTML == roundsWanted) {
+        // what to do if the AI wins
+        location.reload();
+    }
+}
 
 
 
@@ -83,14 +87,14 @@ buttonInstruction.addEventListener("click", openModal);
 nightButton.addEventListener("click", nightMode);
 mainMenuButton.addEventListener("click", mainMenuReset);
 
-function mainMenuReset(){
+function mainMenuReset() {
     location.reload();
-}    
+}
 
 
 // Event listener for whole window to run the modalContainerClick func.
 window.addEventListener("click", modalContainerClick);
- 
+
 
 
 
@@ -246,6 +250,7 @@ function disableGameSvgs() {
 // change style to classses that apply flex.
 // Starts the game
 let scoreBoard = document.getElementById("score-board");
+
 function gameStartup(mainMenu) {
     let userNameSpan = document.getElementById("users-name");
     userNameSpan.innerHTML = userName;
@@ -259,7 +264,7 @@ function gameStartup(mainMenu) {
 function trafficLightAnimation() {
     let trafficLight = document.getElementById("traffic-light");
     trafficLight.classList.add("inline-block");
-    
+
 
     // Time section for traffic light
     setTimeout(function () {
@@ -362,6 +367,7 @@ function win() {
     turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("win");
+    checkWinner();
     gameStartup();
 }
 //Turns off effects and restarts game startup if a Draw
@@ -372,6 +378,7 @@ function lose() {
     turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("lose");
+    checkWinner();
     gameStartup();
 }
 //Turns off effects and restarts game startup if a Draw
@@ -386,30 +393,6 @@ function draw() {
 
 // Game logic comparing user and ai 
 function gameLogic(user, ai) {
-    if (user === ai) {
-        draw();
-    } else if (user === 'rock') {
-        if (ai === 'paper') {
-            lose();
-        } else {
-            win(); // rock beats scissors
-        }
-    } else if (user === 'paper') {
-        if (ai === 'scissor') {
-            lose();
-        } else {
-            win(); // paper beats rock
-        }
-    } else if (user === 'scissor') {
-        if (ai === 'rock') {
-            lose();
-        } else {
-            win(); // scissors beats paper
-        }
-    }
-}
-
-function gameLogicBestOfFive(user, ai) {
     if (user === ai) {
         draw();
     } else if (user === 'rock') {
