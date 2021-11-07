@@ -42,6 +42,9 @@ function closeSettingsModal(){
     settingsModal.style.display = "none";
 }
 
+let nightDayToggle = document.getElementById("night-day-checkbox");
+nightDayToggle.addEventListener("change", nightMode);
+
 
 
 
