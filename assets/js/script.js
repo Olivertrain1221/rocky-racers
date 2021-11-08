@@ -26,7 +26,7 @@ let userName = "";
 let settingsCloseButton = document.getElementById("settings-close-button");
 settingsCloseButton.addEventListener("click", closeSettingsModal);
 
-// TODO: comeback and fix me !!!!!
+// closesModal
 function closeModal() {
     modalContainer.style.display = "none";
 }
@@ -54,10 +54,8 @@ let roundsToggle = document.getElementById("rounds-checkbox");
 roundsToggle.addEventListener("change", function (e) {
     if (roundsToggle.checked) {
         roundsWanted = 5;
-        console.log(roundsWanted);
     } else {
         roundsWanted = 3;
-        console.log(roundsWanted);
     }
 });
 
@@ -99,21 +97,21 @@ window.addEventListener("click", modalContainerClick);
 // Getting main container and button elements to link with traffic lights.
 let mainContainer = document.getElementById("main-container");
 let playButton = document.getElementById("button-play");
-console.log("playbutton", playButton);
 let trafficLight = document.getElementById("traffic-light");
 
+// Turns the color of the game tiles depending on ai selection
+function turnOffAiSelectionEffect() {
+    let rockOuterCircle = document.getElementById("rock-circle");
+    let paperOuterCircle = document.getElementById("paper-circle");
+    let scissorOuterCircle = document.getElementById("scissor-circle");
 
-// Temporary bypass of username, remove line 40-45 and uncomment below
-// playButton.addEventListener("click", getUserName);
-playButton.addEventListener("click", tempStart);
-
-function tempStart() {
-    console.log("tempStart")
-    userName = "temp";
-    mainContainer.classList.add("hidden");
-    gameStartup();
+    rockOuterCircle.classList.remove("outer-circle-fill");
+    paperOuterCircle.classList.remove("outer-circle-fill");
+    scissorOuterCircle.classList.remove("outer-circle-fill");
 }
 
+// PlayButton event listener to run the username func
+playButton.addEventListener("click", getUserName);
 
 
 // Gets the Users name input
@@ -127,7 +125,6 @@ function getUserName() {
         if (name.value) {
             userName = name.value;
             nameModal.style.display = "none";
-            console.log(userName);
             mainContainer.style.display = "none";
             gameStartup();
         }
@@ -143,7 +140,6 @@ function getUserName() {
 function modalContainerClick(e) {
     if (e.target == modalContainer) {
         modalContainer.style.display = "none";
-        console.log("testing")
     }
 }
 
@@ -163,8 +159,6 @@ function winner(result) {
         winnerMessage.classList.remove("draw-message", "win-message")
         winnerMessage.innerText = "Loserrrr unlucky!"
     }
-
-    console.log(winnerMessage)
 }
 
 
@@ -190,6 +184,7 @@ function LightOff() {
     document.getElementById("green").classList.remove("green-light-on");
 }
 
+
 // Determines what game tile to put the effect onto
 function turnOnAiSelectionEffect(ai) {
     let rockOuterCircle = document.getElementById("rock-circle");
@@ -207,6 +202,10 @@ function turnOnAiSelectionEffect(ai) {
             scissorOuterCircle.classList.add("outer-circle-fill");
             break;
     }
+    
+    setTimeout(function () {
+        turnOffAiSelectionEffect()
+    }, 3000);;
 }
 
 let svgs = document.querySelectorAll("svg");
@@ -229,7 +228,7 @@ function disableGameSvgs() {
 // Starts the game
 let scoreBoard = document.getElementById("score-board");
 
-function gameStartup(mainMenu) {
+function gameStartup() {
     let userNameSpan = document.getElementById("users-name");
     userNameSpan.innerHTML = userName;
     let gameTiles = document.getElementsByClassName("rock-paper-scissor-logo")[0];
@@ -291,12 +290,10 @@ let paperInnerCircle = document.getElementById("inner-paper-image");
 let scissorInnerCircle = document.getElementById("inner-scissor-image");
 // What the user selects adds appropriate classes
 function userSelection(tile) {
-    console.log(tile);
     let user = "";
     if (tile == "r") {
         user = "rock";
         rockInnerCircle.classList.add("inner-image-fill")
-        console.log("rock test");
     } else if (tile == "p") {
         user = "paper";
         paperInnerCircle.classList.add("inner-image-fill")
@@ -304,8 +301,6 @@ function userSelection(tile) {
         user = "scissor";
         scissorInnerCircle.classList.add("inner-image-fill")
     }
-
-    console.log(user);
     aiSelection(user);
 
 }
@@ -315,7 +310,6 @@ function userSelection(tile) {
 function aiSelection(user) {
     let aiOptions = ["rock", "paper", "scissor"];
     let ai = aiOptions[Math.floor(Math.random() * 3)];
-    console.log(ai);
     disableGameSvgs();
     turnOnAiSelectionEffect(ai);
 
@@ -339,7 +333,6 @@ function removeUserSelectionColor() {
 
 //Turns off effects and restarts game startup if a Draw
 function win() {
-    console.log("win");
     userScore++;
     userScoreBoard.innerHTML = userScore;
     // turnOffAiSelectionEffect();
@@ -350,7 +343,6 @@ function win() {
 }
 //Turns off effects and restarts game startup if a Draw
 function lose() {
-    console.log("lose");
     aiScore++;
     aiScoreBoard.innerHTML = aiScore;
     // turnOffAiSelectionEffect();
@@ -361,7 +353,6 @@ function lose() {
 }
 //Turns off effects and restarts game startup if a Draw
 function draw() {
-    console.log("draw");
     // turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("draw");
@@ -396,7 +387,6 @@ function gameLogic(user, ai) {
             }
             break;
         default:
-            console.log("user undefined for testing");
             break;
     }
 }
