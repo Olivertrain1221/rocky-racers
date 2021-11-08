@@ -4,7 +4,7 @@
 // readme to do
 // media queries
 
-let roundsWanted = "3";
+let roundsWanted = 3;
 
 const resetClassList = (elm, initialClassList) => {
     elm.classList = "";
@@ -93,12 +93,8 @@ function mainMenuReset() {
     location.reload();
 }
 
-
 // Event listener for whole window to run the modalContainerClick func.
 window.addEventListener("click", modalContainerClick);
-
-
-
 
 // Getting main container and button elements to link with traffic lights.
 let mainContainer = document.getElementById("main-container");
@@ -156,18 +152,15 @@ function winner(result) {
     let winnerMessage = document.getElementById("winner-message");
     if (result == "win") {
         winnerMessage.classList.add("win-message")
-        winnerMessage.classList.remove("lose-message")
-        winnerMessage.classList.remove("draw-message")
+        winnerMessage.classList.remove("lose-message", "draw-message")
         winnerMessage.innerText = "Wahooo Winner"
     } else if (result == "draw") {
         winnerMessage.classList.add("draw-message")
-        winnerMessage.classList.remove("win-message")
-        winnerMessage.classList.remove("lose-message")
+        winnerMessage.classList.remove("win-message", "lost-message")
         winnerMessage.innerText = "Draww!!!"
     } else if (result == "lose") {
         winnerMessage.classList.add("lose-message")
-        winnerMessage.classList.remove("draw-message")
-        winnerMessage.classList.remove("win-message")
+        winnerMessage.classList.remove("draw-message", "win-message")
         winnerMessage.innerText = "Loserrrr unlucky!"
     }
 
@@ -196,22 +189,6 @@ function LightOff() {
     document.getElementById("yellow").classList.remove("yellow-light-on")
     document.getElementById("green").classList.remove("green-light-on");
 }
-
-// Turns the color of the game tiles depending on ai selection
-function turnOffAiSelectionEffect() {
-    let rockOuterCircle = document.getElementById("rock-circle");
-    let paperOuterCircle = document.getElementById("paper-circle");
-    let scissorOuterCircle = document.getElementById("scissor-circle");
-
-    rockOuterCircle.classList.add("outer-circle-fill");
-    paperOuterCircle.classList.add("outer-circle-fill");
-    scissorOuterCircle.classList.add("outer-circle-fill");
-
-    rockOuterCircle.classList.remove("outer-circle-fill");
-    paperOuterCircle.classList.remove("outer-circle-fill");
-    scissorOuterCircle.classList.remove("outer-circle-fill");
-}
-
 
 // Determines what game tile to put the effect onto
 function turnOnAiSelectionEffect(ai) {
@@ -366,7 +343,7 @@ function win() {
     console.log("win");
     userScore++;
     userScoreBoard.innerHTML = userScore;
-    turnOffAiSelectionEffect();
+    // turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("win");
     checkWinner();
@@ -377,7 +354,7 @@ function lose() {
     console.log("lose");
     aiScore++;
     aiScoreBoard.innerHTML = aiScore;
-    turnOffAiSelectionEffect();
+    // turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("lose");
     checkWinner();
@@ -386,10 +363,9 @@ function lose() {
 //Turns off effects and restarts game startup if a Draw
 function draw() {
     console.log("draw");
-    turnOffAiSelectionEffect();
+    // turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("draw");
-    winner("draw")
     gameStartup();
 }
 
