@@ -53,10 +53,10 @@ let roundsToggle = document.getElementById("rounds-checkbox");
 
 roundsToggle.addEventListener("change", function (e) {
     if (roundsToggle.checked) {
-        roundsWanted = "5";
+        roundsWanted = 5;
         console.log(roundsWanted);
     } else {
-        roundsWanted = "3";
+        roundsWanted = 3;
         console.log(roundsWanted);
     }
 });
