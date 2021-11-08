@@ -1,3 +1,6 @@
+/* jshint esversion: 8 */
+
+
 // readme to do
 // media queries
 
@@ -48,7 +51,7 @@ nightDayToggle.addEventListener("change", nightMode);
 
 let roundsToggle = document.getElementById("rounds-checkbox");
 
-roundsToggle.addEventListener("change", function(e) {
+roundsToggle.addEventListener("change", function (e) {
     if (roundsToggle.checked) {
         roundsWanted = "5";
         console.log(roundsWanted);
@@ -414,4 +417,3 @@ function gameLogic(user, ai) {
         }
     }
 }
-

@@ -1,11 +1,10 @@
-
 /* add in the day back ground still */
 body {
     background-repeat: no-repeat;
     background-size: auto 100vh;
     background-image: url("../images/raceroad.jpg");
 }
-   
+
 
 .night-background {
     background-image: url("../images/raceroad-night.jpg");
@@ -60,6 +59,7 @@ h1 {
 /* inner container of instruction modal */
 .modal-inner-container {
     background: white;
+    padding: 3em;
     height: 400px;
     width: 600px;
     margin: 0 auto;
@@ -75,7 +75,7 @@ h1 {
 }
 
 #settings-container {
-    display: flex; 
+    display: flex;
     justify-content: space-around;
 }
 
@@ -95,7 +95,7 @@ h1 {
 }
 
 .settings-modal-column {
-    text-align: center; 
+    text-align: center;
 }
 
 .checkbox {
@@ -132,7 +132,7 @@ h1 {
     transition: 500ms;
 }
 
-.checkbox:checked ~ .toggle:before {
+.checkbox:checked~.toggle:before {
     transform: translateX(40px);
 }
 
@@ -149,7 +149,7 @@ h1 {
     transform: translateX(-40px);
 }
 
-.checkbox:checked ~ .toggle:after {
+.checkbox:checked~.toggle:after {
     transform: translateX(0px);
 }
 
@@ -210,7 +210,7 @@ h1 {
     color: #442208
 }
 
-.main-menu-button{
+.main-menu-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +240,7 @@ h1 {
     justify-content: center;
     align-items: center;
     height: 60px;
-    width: 100px;
+    width: 80px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 30px;
@@ -250,6 +250,7 @@ h1 {
     font-size: 20px;
     color: #442208
 }
+
 #main-container {
     color: white;
     width: 500px;
@@ -274,8 +275,9 @@ h1 {
 .flex {
     display: flex;
 }
+
 /* inline block */
-.inline-block{
+.inline-block {
     display: inline-block;
 }
 
@@ -311,35 +313,21 @@ h1 {
 
 /* Win Message colors */
 .win-message {
-    color:rgb(23, 71, 23);
+    color: rgb(0, 0, 0);
 }
 
 .draw-message {
-    color:rgb(151, 151, 0);
+    color: rgb(0, 0, 0);
 }
 
 .lose-message {
-    color:rgb(153, 0, 0)
+    color: rgb(0, 0, 0)
 }
 
 
 /* definition around the traffic lights */
-#red {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: black;
-}
-
-#yellow {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: black;
-}
-
+#red,
+#yellow,
 #green {
     width: 70px;
     height: 70px;
@@ -347,6 +335,7 @@ h1 {
     border-style: solid;
     border-color: black;
 }
+
 
 .light-surround {
     border-radius: 50%;
@@ -356,7 +345,7 @@ h1 {
 
 /* User seclection color class */
 .inner-image-fill {
-    fill: rgb(0, 224, 0);
+    fill: rgb(0, 255, 0);
 }
 
 #scissor-circle {
@@ -372,16 +361,8 @@ h1 {
     z-index: 10;
 }
 
-#scissor-image>* {
-    position: relative;
-    z-index: 9;
-}
-
-#paper-image>* {
-    position: relative;
-    z-index: 9;
-}
-
+#scissor-image>*,
+#paper-image>*,
 #rock-image>* {
     position: relative;
     z-index: 9;
@@ -392,7 +373,6 @@ h1 {
     width: 150px;
     position: relative;
     z-index: 10;
-
 }
 
 .tile-container {
