@@ -59,6 +59,7 @@ roundsToggle.addEventListener("change", function (e) {
     }
 });
 
+// Checking the winner result via the ai
 function checkWinner() {
     if (userScoreBoard.innerHTML == roundsWanted) {
         // what if user wins??? what is it to do
@@ -87,6 +88,7 @@ buttonInstruction.addEventListener("click", openModal);
 nightButton.addEventListener("click", nightMode);
 mainMenuButton.addEventListener("click", mainMenuReset);
 
+// Called when the menu is selected.
 function mainMenuReset() {
     location.reload();
 }

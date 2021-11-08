@@ -113,6 +113,7 @@ Upon testing the site I took a two stage approach. The first stage was continuou
 On the second stage of my testing, I utilised online programs to check various things from actual lines of code to ensure it is written correctly and also used various contast checkers to ensure that accessibility for ALL users was correct. I then proceeded to run through the testers and noted any errors or changes that were required. Any errors were corrected and then the tests repeated to ensure that they work.
 Please follow a link to my testing.md file where it has a more extensive breakdown [here](testing.md). 
 
+
 # Testing Overview
 
 Testing was divided into different sections to ensure everything was tested individually with test cases developed for each area. 
@@ -131,11 +132,11 @@ Validator Testing
 # Notable Bugs
 No bugs of note were discovered during the development or testing of the site. However frustration with the different requirements from different browsers was experienced. Multiple small visual errors were encountered during testing across different devices, browsers or browser versions which needed additional CSS style rules to overcome. For example, older versions of iOS safari required button minimum dimensions to be added in order to display the buttons correctly.
 Deployment
-•	The site was deployed to GitHub pages. The steps to deploy are as follows:
-o	In the GitHub repository, navigate to the settings tab
-o	Select the pages link from the setting menu on the left hand side
-o	Under the GitHub Pages from the source section drop-down menu, select the master branch
-o	One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+    *	The site was deployed to GitHub pages. The steps to deploy are as follows:
+    * In the GitHub repository, navigate to the settings tab
+    *Select the pages link from the setting menu on the left hand side
+    * Under the GitHub Pages from the source section drop-down menu, select the master branch
+    * One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 The live link can be found here - UFO Duel Live Site
 Credits
 Media
