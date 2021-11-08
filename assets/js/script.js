@@ -192,21 +192,20 @@ function LightOff() {
 
 // Determines what game tile to put the effect onto
 function turnOnAiSelectionEffect(ai) {
-    console.log("start aieffect function");
-    console.log(ai);
     let rockOuterCircle = document.getElementById("rock-circle");
     let paperOuterCircle = document.getElementById("paper-circle");
     let scissorOuterCircle = document.getElementById("scissor-circle");
 
-    if (ai == "rock") {
-        rockOuterCircle.classList.add("outer-circle-fill");
-        console.log("rock on");
-    } else if (ai == "paper") {
-        paperOuterCircle.classList.add("outer-circle-fill");
-        console.log("paper on");
-    } else if (ai == "scissor") {
-        scissorOuterCircle.classList.add("outer-circle-fill");
-        console.log("scissor on");
+    switch (ai) {
+        case "rock":
+            rockOuterCircle.classList.add("outer-circle-fill");
+            break;
+        case "paper":
+            paperOuterCircle.classList.add("outer-circle-fill");
+            break;
+        case "scissor":
+            scissorOuterCircle.classList.add("outer-circle-fill");
+            break;
     }
 }
 
@@ -371,25 +370,33 @@ function draw() {
 
 // Game logic comparing user and ai 
 function gameLogic(user, ai) {
-    if (user === ai) {
-        draw();
-    } else if (user === 'rock') {
-        if (ai === 'paper') {
-            lose();
-        } else {
-            win(); // rock beats scissors
-        }
-    } else if (user === 'paper') {
-        if (ai === 'scissor') {
-            lose();
-        } else {
-            win(); // paper beats rock
-        }
-    } else if (user === 'scissor') {
-        if (ai === 'rock') {
-            lose();
-        } else {
-            win(); // scissors beats paper
-        }
+    switch (user) {
+        case ai:
+            draw();
+            break;
+        case "rock":
+            if (ai === 'paper') {
+                lose();
+            } else {
+                win(); // rock beats scissors
+            }
+            break;
+        case "paper":
+            if (ai === 'scissor') {
+                lose();
+            } else {
+                win(); // paper beats rock
+            }
+            break;
+        case "scissors":
+            if (ai === 'rock') {
+                lose();
+            } else {
+                win(); // scissors beats paper
+            }
+            break;
+        default:
+            console.log("user undefined for testing");
+            break;
     }
 }
