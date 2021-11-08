@@ -1,108 +1,156 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rocky Racers
 
-Welcome Olivertrain1221,
+## Introduction
+Rocky Racers is a web base game with JavaScript, HTML and CSS. This game is a variant of the traditional “rock paper scissor” this game has a target audience of someone who may want a short fun game to play.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Home Page Preview](/assets/images/read-me-images/responsive-image.PNG)
+### UX
+The Strategy Plane
+•	Rocky Racers is intended to be a fun yet simple game for individual users to play for short periods of time against a computer element rather than requiring a third to party to also play with the game has small graphics and a score board in orderfor the user to feel satisfied with visual effects and to also bring out there competitive side by being able to view whos winning and losing.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+### Site Goals
+•	To provide users with a fun and simple game to play
+•	To ensure that navigating the site is easy and intuitive, users don't need to work out where to go.
+•	To provide users with alternative difficulty levels
+•	To provide users with alternative methods to play the game
+•	To ensure the game is fully accessible on desktop and touch enabled devices
+•	To ensure the game is fully compliant with keyboard commands and screen readers
+### User Stories
+•	As a user I want a fun and simple game to play
+•	As a user I want to be able to play a more challenging version of the game
+•	As a user I want to be able to play an easier and quicker version of the game
+•	As a user I like to play games in the evening and want to be able to reduce eye strain upon playing.
+The Scope Plane
+### Features planned:
+•	Responsive Design - The site should function correctly across the range of devices the user could potentially use to access the game on such as Desktop, Laptop, Tablet and Mobile's.
+•	All navigation elements should be contained within the game screen. No need to search for anything.
+•	The site should be visually stimulating and clear to the user that it is a game.
+•	Alternative colour options should be available such as a dark mode.
+•	The site should be fully accessible for screen reader users.
 
-## Gitpod Reminders
+### The Structure Plane
+## User Story:
+As a user, I want a fun and simple game to play
+Acceptance Criteria:
+•	It should be clear that it is a game, what it is about and how to play.
+Implementation:
+•	The layout, colour scheme font choice and graphic choices should all make it clear and provide a sense of fun to the user that this is a game site. There will be a direct link to the instructions of the game on the homepage so the user can easily learn how to play.
+User Story:
+As a user, I want to be able to control the time it takes to play the game
+Acceptance Criteria:
+•	The user should be able to choose to play the game as many times as they want and allow them to quit at any point via the main menu button.
+Implementation:
+•	The user will have the ability to choose from a night mode and a day mode also they can only select there answer as the traffic lights are enabled.
+Opportunities
+Arising from user stories
+Opportunities	Importance	Viability / Feasibility
+** Provide a fun game environment **	5	5
+** Provide fun animations to bring the game to life **	5	5
+		
+** Provide ability to control the time the game takes **	5	5
+** Provide ability to change the colour scheme **	5	5
+		
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### The Skeleton Plane
+Wireframe Mockups
+I used Balsamiq to produce low quality wireframes of how the game would appear across different devices and platforms. Although the game is intended to be contained on the one page, I produced a wireframe for each of the different parts of the content (Menu, Instructions and Game play). Using Balsamiq allowed me to consider multiple layouts ideas.
 
-`python3 -m http.server`
+![Main Menu Preview](/assets/images/read-me-images/homepage-actual.PNG)
 
-A blue button should appear to click: _Make Public_,
+### The Surface Plane
+Design
+Once happy with the theme and structure for the site, and the layout of each section of the content. I then started to style my site using the CSS and used colours accordingly to ensure there are no contrast issues.  For the dark night mode, I followed hints and tips from other coders on the slack site to ensure that the contrast was not incorrect and worked accordingly.
 
-Another blue button should appear to click: _Open Browser_.
+Background Image
+The background image helped to enhance the theme that I was aiming to creates. It was acquired from the vecteezy.com website where it was available for free download and use. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Background Image](/assets/images/raceroad.jpg)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+The original image was then amended via tinypng.com this was used to allow the photo to be reduced in size and for the applications boot time to be sped up which therefore increases usability.
+Colour Scheme
+To ensure that the colours I chose for all of my elements provided an appropriate contrast ratio the colour codes were loaded into a contrast checker available at Contrast Grid
+Colour Schemes Used
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#Typography
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Google fonts was utilised to find a font that would be clean and clear for all users, whilst still conveying an element of fun. I eventually settled on 'Mukta'  sans-serif.
+Traffic Light
+Whilst I originally experimented with using a Traffic light imagine for use in the site, I ended up making the traffic light using html and CSS itself to allow me to use JavaScript to give the traffic light an animation which gave a friendlier user interface.
+Features
+    * Common Features the site is designed using different html elements which are shown via flex or inline styles that are only given to the element via JavaScript this allowed me to make the page flow for the user.
+    * The main menu is the page of the site that the user is greeted to when they first visit. The design is basic yet makes it obvious to the user that it is a game. I have done this by limiting what is visible on the menu page making it quite clear what they have to click/ do in order to use the page this fits with the user stories of being able to navigate around the site successfully.
+Light scheme menu pic
+Dark Colour Scheme 
+    * There is a modal that is used to display the instructions for the game which opens and closes accordingly depending on user click events.
+    * The second screen the user will come across will be to ask them to enter their name. 
 
-------
+![Name menu Preview](/assets/images/read-me-images/homepage-actual.PNG)
+![Night Mode Previw](/assets/images/raceroad-night.png)
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+# Future Enhancements
+    * Leaderboard
+    * I would like to add a leader board function in so the highest winner can be shown along with users being able to compare their scores to other users that have played the game
+![Night Mode Previw](/assets/images/read-me-images/leaderboard-page.PNG)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+    * Different Levels
+    * The game would be better if it had some different levels with an intelligent ai element this could then allow users to have a more competitive game play if they chose to.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# Testing
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Testing Strategy
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Upon testing the site I took a two stage approach. The first stage was continuous testing as the site was being developed by myself and purposely trying to “break” the game. This was especially important to do during development of the JavaScript to ensure that the different functions and variables etc all did the correct thing at the correct time the most important one to link in was the users selection and the ai selection in time with the traffic lights sequence. During styling the site I would check the visual appearence within the developer tools to preview the changes before they were committed to ensure that the style was friendly and worked.
+On the second stage of my testing, I utilised online programs to check various things from actual lines of code to ensure it is written correctly and also used various contast checkers to ensure that accessibility for ALL users was correct. I then proceeded to run through the testers and noted any errors or changes that were required. Any errors were corrected and then the tests repeated to ensure that they work.
+Please follow a link to my testing.md file where it has a more extensive breakdown [here](testing.md). 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Testing Overview
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Testing was divided into different sections to ensure everything was tested individually with test cases developed for each area. 
+Validator Testing
+    * HTML
+    * No errors were returned when passing through the official W3C Validator. View Report
+    * CSS
+    * No errors were returned when passing through the official W3C CSS Validation Service - Jigsaw. View Report
+    * JavaScript
+    * No errors were returned when passing through the validator service at JSHint.com.  
+    * WAVE Web Accessibility
+    * Three errors were returned in the WAVE web accessibility report which are detailed in the TESTING.md file along with the resolution. View Report
+    * Lighthouse
+    * The lighthouse report gave an almost perfect score of 99, 100, 100, 100.  
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# Notable Bugs
+No bugs of note were discovered during the development or testing of the site. However frustration with the different requirements from different browsers was experienced. Multiple small visual errors were encountered during testing across different devices, browsers or browser versions which needed additional CSS style rules to overcome. For example, older versions of iOS safari required button minimum dimensions to be added in order to display the buttons correctly.
+Deployment
+•	The site was deployed to GitHub pages. The steps to deploy are as follows:
+o	In the GitHub repository, navigate to the settings tab
+o	Select the pages link from the setting menu on the left hand side
+o	Under the GitHub Pages from the source section drop-down menu, select the master branch
+o	One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+The live link can be found here - UFO Duel Live Site
+Credits
+Media
+•	The background image of the trees was obtained from Vecteezy.com
+•	The favicon was created by using favicon-generator.org. The generator created both the image file and the link tag code for the head of the HTML file.
+Content
+•	CSS Styling
+o	The styling for the custom slider used in the settings modal was amended from the code generated from a range.css generator. I discovered the site from an article on css-tricks.com.
+o	The animation for the UFO's sliding in and out of the screen was initially generated on animista.net. Whilst I subsequently created several other animations I used the original code generated from the site as a reference point.
+o	How to create the custom toggle switches used in the settings modal were developed from a tutorial on w3schools.
+•	Hard Mode Logic
+o	Wang, Z. and Xu, B. and Zhou, H. (2014) 'Social cycling and conditional responses in the Rock-Paper-Scissors game', Scientific Reports, 4(5830) available at: link to published article last accessed on 24/07/2021. This journal article of a study done into the patterns in people's decision making during a game of Rock Paper Scissors formed the basis of the logic implemented for the hard difficulty.
+Reference Material
+•	W3 Schools was used as a reference point for HTML, CSS and JavaScript
+•	MDN Web Docs was also used as a reference point for HTML, CSS and JavaScript
+Acknowledgements
+I'd like to thank my mentor Rahul Lakhanpal for encouraging me to be more ambitious than my original design for the project. The more ambitious design was a lot of fun to create.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
