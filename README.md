@@ -24,9 +24,9 @@ The Strategy Plane
 *	As a user I want to be able to play an easier and quicker version of the game
 *	As a user I like to play games in the evening and want to be able to reduce eye strain upon playing.
 
+![Night mode Preview](/assets/images/read-me-images/night-image-gameplay.PNG)
 
-## The Scope Plane
-
+The Scope Plane
 ### Features planned:
 *	Responsive Design - The site should function correctly across the range of devices the user could potentially use to access the game on such as Desktop, Laptop, Tablet and Mobile's.
 *	All navigation elements should be contained within the game screen. No need to search for anything.
@@ -37,17 +37,23 @@ The Strategy Plane
 ### The Structure Plane
 
 ## User Story:
+
 As a user, I want a fun and simple game to play
 Acceptance Criteria:
     * It should be clear that it is a game, what it is about and how to play.
+
 Implementation:
     * The layout, colour scheme font choice and graphic choices should all make it clear and provide a sense of fun to the user that this is a game site. There will be a direct link to the instructions of the game on the homepage so the user can easily learn how to play.
+
 User Story:
-As a user, I want to be able to control the time it takes to play the game
+
+As a user, I want to be able to control the time it takes to play the game.
 Acceptance Criteria:
     * The user should be able to choose to play the game as many times as they want and allow them to quit at any point via the main menu button.
+
 Implementation:
     * The user will have the ability to choose from a night mode and a day mode also they can only select there answer as the traffic lights are enabled.
+
 Opportunities
 Arising from user stories
 Opportunities	Importance	Viability / Feasibility
@@ -80,16 +86,18 @@ Colour Schemes Used
 
 
 
-#Typography
+# Typography
 
 Google fonts was utilised to find a font that would be clean and clear for all users, whilst still conveying an element of fun. I eventually settled on 'Mukta'  sans-serif.
 Traffic Light
 Whilst I originally experimented with using a Traffic light imagine for use in the site, I ended up making the traffic light using html and CSS itself to allow me to use JavaScript to give the traffic light an animation which gave a friendlier user interface.
-Features
+
+
+# Features
     * Common Features the site is designed using different html elements which are shown via flex or inline styles that are only given to the element via JavaScript this allowed me to make the page flow for the user.
     * The main menu is the page of the site that the user is greeted to when they first visit. The design is basic yet makes it obvious to the user that it is a game. I have done this by limiting what is visible on the menu page making it quite clear what they have to click/ do in order to use the page this fits with the user stories of being able to navigate around the site successfully.
-Light scheme menu pic
-Dark Colour Scheme 
+# Light scheme menu pic
+# Dark Colour Scheme 
     * There is a modal that is used to display the instructions for the game which opens and closes accordingly depending on user click events.
     * The second screen the user will come across will be to ask them to enter their name. 
 
@@ -113,8 +121,6 @@ Dark Colour Scheme
 
 Upon testing the site I took a two stage approach. The first stage was continuous testing as the site was being developed by myself and purposely trying to “break” the game. This was especially important to do during development of the JavaScript to ensure that the different functions and variables etc all did the correct thing at the correct time the most important one to link in was the users selection and the ai selection in time with the traffic lights sequence. During styling the site I would check the visual appearence within the developer tools to preview the changes before they were committed to ensure that the style was friendly and worked.
 On the second stage of my testing, I utilised online programs to check various things from actual lines of code to ensure it is written correctly and also used various contast checkers to ensure that accessibility for ALL users was correct. I then proceeded to run through the testers and noted any errors or changes that were required. Any errors were corrected and then the tests repeated to ensure that they work.
-Please follow a link to my testing.md file where it has a more extensive breakdown [here](testing.md). 
-
 
 # Testing Overview
 
@@ -127,9 +133,14 @@ Validator Testing
     * JavaScript
     * No errors were returned when passing through the validator service at JSHint.com.  
     * WAVE Web Accessibility
-    * Three errors were returned in the WAVE web accessibility report which are detailed in the TESTING.md file along with the resolution. View Report
-    * Lighthouse
+    * Four warnings are displayed in the html validator on
     * The lighthouse report gave an almost perfect score of 99, 100, 100, 100.  
+
+![HTML Validator](/assets/images/read-me-images/html-validator.PNG)
+![JavaScript Validator](/assets/images/read-me-images/js-validator.PNG)
+![CSS Validator](/assets/images/read-me-images/css-validator.PNG)
+
+
 
 # Notable Bugs
 No bugs of note were discovered during the development or testing of the site. However frustration with the different requirements from different browsers was experienced. Multiple small visual errors were encountered during testing across different devices, browsers or browser versions which needed additional CSS style rules to overcome. For example, older versions of iOS safari required button minimum dimensions to be added in order to display the buttons correctly.
