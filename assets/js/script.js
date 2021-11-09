@@ -9,7 +9,7 @@ let roundsWanted = 3;
 const resetClassList = (elm, initialClassList) => {
     elm.classList = "";
     initialClassList.forEach((className) => elm.classList.add(className));
-}
+};
 
 function nightMode() {
     bodyTag.classList.toggle("night-background");
@@ -31,7 +31,7 @@ function closeModal() {
     modalContainer.style.display = "none";
 }
 // Modal container element assignement
-let buttonSettings = document.getElementById("button-settings")
+let buttonSettings = document.getElementById("button-settings");
 buttonSettings.addEventListener("click", openSettingsModal);
 
 function openSettingsModal() {
@@ -134,7 +134,7 @@ function getUserName() {
 
 
     });
-};
+}
 
 // Closes the modal upon event
 
@@ -149,17 +149,17 @@ function modalContainerClick(e) {
 function winner(result) {
     let winnerMessage = document.getElementById("winner-message");
     if (result == "win") {
-        winnerMessage.classList.add("win-message")
-        winnerMessage.classList.remove("lose-message", "draw-message")
-        winnerMessage.innerText = "Wahooo Winner"
+        winnerMessage.classList.add("win-message");
+        winnerMessage.classList.remove("lose-message", "draw-message");
+        winnerMessage.innerText = "Wahooo Winner";
     } else if (result == "draw") {
-        winnerMessage.classList.add("draw-message")
-        winnerMessage.classList.remove("win-message", "lost-message")
-        winnerMessage.innerText = "Draww!!!"
+        winnerMessage.classList.add("draw-message");
+        winnerMessage.classList.remove("win-message", "lost-message");
+        winnerMessage.innerText = "Draww!!!";
     } else if (result == "lose") {
-        winnerMessage.classList.add("lose-message")
-        winnerMessage.classList.remove("draw-message", "win-message")
-        winnerMessage.innerText = "Loserrrr unlucky!"
+        winnerMessage.classList.add("lose-message");
+        winnerMessage.classList.remove("draw-message", "win-message");
+        winnerMessage.innerText = "Loserrrr unlucky!";
     }
 }
 
@@ -167,22 +167,22 @@ function winner(result) {
 // The traffic lights coming on
 function redLightOn() {
     let redLight = document.getElementById("red");
-    redLight.classList.add("red-light-on")
+    redLight.classList.add("red-light-on");
 }
 
 function yellowLightOn() {
     let yellowLight = document.getElementById("yellow");
-    yellowLight.classList.add("yellow-light-on")
+    yellowLight.classList.add("yellow-light-on");
 
 }
 
 function greenLightOn() {
     let greenLight = document.getElementById("green");
-    greenLight.classList.add("green-light-on")
+    greenLight.classList.add("green-light-on");
 }
 
 function LightOff() {
-    document.getElementById("yellow").classList.remove("yellow-light-on")
+    document.getElementById("yellow").classList.remove("yellow-light-on");
     document.getElementById("green").classList.remove("green-light-on");
 }
 
@@ -206,8 +206,8 @@ function turnOnAiSelectionEffect(ai) {
     }
     
     setTimeout(function () {
-        turnOffAiSelectionEffect()
-    }, 3000);;
+        turnOffAiSelectionEffect();
+    }, 3000);
 }
 
 let svgs = document.querySelectorAll("svg");
@@ -295,13 +295,13 @@ function userSelection(tile) {
     let user = "";
     if (tile == "r") {
         user = "rock";
-        rockInnerCircle.classList.add("inner-image-fill")
+        rockInnerCircle.classList.add("inner-image-fill");
     } else if (tile == "p") {
         user = "paper";
-        paperInnerCircle.classList.add("inner-image-fill")
+        paperInnerCircle.classList.add("inner-image-fill");
     } else if (tile == "s") {
         user = "scissor";
-        scissorInnerCircle.classList.add("inner-image-fill")
+        scissorInnerCircle.classList.add("inner-image-fill");
     }
     aiSelection(user);
 

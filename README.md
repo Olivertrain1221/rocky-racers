@@ -12,8 +12,6 @@ The Strategy Plane
 ### Site Goals
 *	To provide users with a fun and simple game to play
 *	To ensure that navigating the site is easy and intuitive, users don't need to work out where to go.
-*	To provide users with alternative difficulty levels
-*	To provide users with alternative methods to play the game
 *	To ensure the game is fully accessible on desktop and touch enabled devices
 
 ![Settings Page Preview](/assets/images/read-me-images/settings-screenshot.PNG)
@@ -40,19 +38,19 @@ The Scope Plane
 
 As a user, I want a fun and simple game to play
 Acceptance Criteria:
-    * It should be clear that it is a game, what it is about and how to play.
+*   It should be clear that it is a game, what it is about and how to play.
 
 Implementation:
-    * The layout, colour scheme font choice and graphic choices should all make it clear and provide a sense of fun to the user that this is a game site. There will be a direct link to the instructions of the game on the homepage so the user can easily learn how to play.
+*   The layout, colour scheme font choice and graphic choices should all make it clear and provide a sense of fun to the user that this is a game site. There will be a direct link to the instructions of the game on the homepage so the user can easily learn how to play.
 
 User Story:
 
 As a user, I want to be able to control the time it takes to play the game.
 Acceptance Criteria:
-    * The user should be able to choose to play the game as many times as they want and allow them to quit at any point via the main menu button.
+*   The user should be able to choose to play the game as many times as they want and allow them to quit at any point via the main menu button.
 
 Implementation:
-    * The user will have the ability to choose from a night mode and a day mode also they can only select there answer as the traffic lights are enabled.
+*   The user will have the ability to choose from a night mode and a day mode also they can only select there answer as the traffic lights are enabled.
 
 #### Opportunities
 Arising from user stories
@@ -75,19 +73,16 @@ I used Balsamiq to produce low quality wireframes of how the game would appear a
 ![Gameplay Wireframe on a mobile](/assets/images/read-me-images/mobile-gameplay.PNG)
 
 
-
-
 ### The Surface Plane
 Design
-Once happy with the theme and structure for the site, and the layout of each section of the content. I then started to style my site using the CSS and used colours accordingly to ensure there are no contrast issues.  For the dark night mode, I followed hints and tips from other coders on the slack site to ensure that the contrast was not incorrect and worked accordingly.
+Once happy with the theme and structure for the site, and the layout of each section of the content. I then started to style my site using the CSS and used colours accordingly to ensure there are no contrast issues. 
 
 Background Image
-The background image helped to enhance the theme that I was aiming to creates. It was acquired from the vecteezy.com website where it was available for free download and use. 
+The background image helped to enhance the theme that I was aiming to create. It was acquired from the [vecteezy.com](https://www.vecteezy.com/) website where it was available for free download and use. 
 
 ![Main Menu Preview](/assets/images/read-me-images/homepage-actual.PNG)
 
-The original image was then amended via tinypng.com this was used to allow the photo to be reduced in size and for the applications boot time to be sped up which therefore increases usability.
-
+The original image was then amended via tinypng.com this was used to allow the photo to be reduced in size and for the applications boot time to be sped up which therefore increases usability and will keep the audience playing finding it to be interactive and quick to resemble also the fast paced game it is.
 
 ## Colour Scheme
 To ensure that the colours I chose for all of my elements provided an appropriate contrast ratio the colour codes were loaded into a contrast checker available at Contrast Grid
@@ -100,37 +95,37 @@ Colour Schemes Used
 # Typography
 
 Google fonts was utilised to find a font that would be clean and clear for all users, whilst still conveying an element of fun. I eventually settled on 'Mukta'  sans-serif.
-Traffic Light
 Whilst I originally experimented with using a Traffic light imagine for use in the site, I ended up making the traffic light using html and CSS itself to allow me to use JavaScript to give the traffic light an animation which gave a friendlier user interface.
 
 
 # Features
-    * Common Features the site is designed using different html elements which are shown via flex or inline styles that are only given to the element via JavaScript this allowed me to make the page flow for the user.
-    * The main menu is the page of the site that the user is greeted to when they first visit. The design is basic yet makes it obvious to the user that it is a game. I have done this by limiting what is visible on the menu page making it quite clear what they have to click/ do in order to use the page this fits with the user stories of being able to navigate around the site successfully.
-# Light scheme menu pic
-# Dark Colour Scheme 
-    * There is a modal that is used to display the instructions for the game which opens and closes accordingly depending on user click events.
-    * The second screen the user will come across will be to ask them to enter their name. 
+*   Common Features the site is designed using different html elements which are shown via flex or inline styles that are only given to the element via JavaScript this allowed me to make the page flow for the user.
+*   The main menu is the page of the site that the user is greeted to when they first visit. The design is basic yet makes it obvious to the user that it is a game. I have done this by limiting what is visible on the menu page making it quite clear what they have to click/ do in order to use the page this fits with the user stories of being able to navigate around the site successfully.
+*   Another feature is the user can choose between a night and a day mode.
+*   There is a modal that is used to display the instructions for the game which opens and closes accordingly depending on user click events.
+*   The second screen the user will come across will be to ask them to enter their name. 
+*   Different level of game modes.
 
 ![Name menu Preview](/assets/images/read-me-images/homepage-actual.PNG)
 ![Night Mode Preview](/assets/images/raceroad-night.png)
 
 # Future Enhancements
-    * Leaderboard
-    * I would like to add a leader board function in so the highest winner can be shown along with users being able to compare their scores to other users that have played the game
+
+*   Leaderboard
+*   I would like to add a leader board function in so the highest winner can be shown along with users being able to compare their scores to other users that have played the game
 ![Leaderboard Wireframe](/assets/images/read-me-images/leaderboard-page.PNG)
 
 
-    * Different Levels
-    * The game would be better if it had some different levels with an intelligent ai element this could then allow users to have a more competitive game play if they chose to.
-
-
+*   Different Levels
+*   The game would be better if it had some different levels with an intelligent ai element this could then allow users to have a more competitive game play if they chose to.
 
 # Testing
 
 ## Testing Strategy
 
-Upon testing the site I took a two stage approach. The first stage was continuous testing as the site was being developed by myself and purposely trying to “break” the game. This was especially important to do during development of the JavaScript to ensure that the different functions and variables etc all did the correct thing at the correct time the most important one to link in was the users selection and the ai selection in time with the traffic lights sequence. During styling the site I would check the visual appearence within the developer tools to preview the changes before they were committed to ensure that the style was friendly and worked.
+Upon testing the site I took a two stage approach. The first stage was continuous testing as the site was being developed by myself and purposely trying to “break” the game. This was especially important to do during development of the JavaScript to ensure that the different functions and variables etc all did the correct thing at the correct time the most important one to link in was the users selection and the ai selection in time with the traffic lights sequence. During styling the site I would check the visual appearence within the developer tools to preview the changes before they were committed to my actual project to ensure that the style was friendly and worked.
+
+
 On the second stage of my testing, I utilised online programs to check various things from actual lines of code to ensure it is written correctly and also used various contast checkers to ensure that accessibility for ALL users was correct. I then proceeded to run through the testers and noted any errors or changes that were required. Any errors were corrected and then the tests repeated to ensure that they work.
 
 # Testing Overview
@@ -156,11 +151,11 @@ Validator Testing
 # Notable Bugs
 One major bug that i noticed during development was trying to top the traffic lights before the scoreboard was updated. This was corrected by disabling the game svgs and linking the traffic light function at the correct time.
 Deployment
-    *	The site was deployed to GitHub pages. The steps to deploy are as follows:
-    * In the GitHub repository, navigate to the settings tab
-    * Select the pages link from the setting menu on the left hand side
-    * Under the GitHub Pages from the source section drop-down menu, select the master branch
-    * One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+*   The site was deployed to GitHub pages. The steps to deploy are as follows:
+*   In the GitHub repository, navigate to the settings tab
+*   Select the pages link from the setting menu on the left hand side
+*   Under the GitHub Pages from the source section drop-down menu, select the master branch
+*   Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
 # Credits
 ## Media
