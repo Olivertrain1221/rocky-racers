@@ -88,8 +88,8 @@ The original image was then amended via tinypng.com this was used to allow the p
 To ensure that the colours I chose for all of my elements provided an appropriate contrast ratio the colour codes were loaded into a contrast checker available at Contrast Grid
 Colour Schemes Used
 
-![Contrast Check](/assets/images/contrast.png)
-![Contrast Check](/assets/images/hover-contrast.png)
+![Contrast Check](/assets/images/read-me-images/contrast.png)
+![Contrast Check](/assets/images/read-me-images/contrast.png)
 
 
 # Typography

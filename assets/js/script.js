@@ -62,7 +62,7 @@ roundsToggle.addEventListener("change", function (e) {
 // Checking the winner result via the ai
 function checkWinner() {
     if (userScoreBoard.innerHTML == roundsWanted) {
-        // what if user wins??? what is it to do
+        // what to do if the user wins
         location.reload();
     } else if (aiScoreBoard.innerHTML == roundsWanted) {
         // what to do if the AI wins
@@ -315,7 +315,9 @@ function aiSelection(user) {
     disableGameSvgs();
     turnOnAiSelectionEffect(ai);
 
-    setTimeout(function () {
+    setTimeout(function() {
+        console.log("user=", user);
+        console.log("ai=", ai);
         gameLogic(user, ai);
     }, 3000);
 
@@ -337,37 +339,39 @@ function removeUserSelectionColor() {
 function win() {
     userScore++;
     userScoreBoard.innerHTML = userScore;
-    // turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("win");
     checkWinner();
     gameStartup();
+    console.log("made-it-to-end-of-win")
 }
 //Turns off effects and restarts game startup if a Draw
 function lose() {
     aiScore++;
     aiScoreBoard.innerHTML = aiScore;
-    // turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("lose");
     checkWinner();
     gameStartup();
+    console.log("made-it-to-end-of-lose")
 }
 //Turns off effects and restarts game startup if a Draw
 function draw() {
-    // turnOffAiSelectionEffect();
     removeUserSelectionColor();
     winner("draw");
     gameStartup();
+    console.log("made-it-to-end-of-draw")
 }
 
 // Game logic comparing user and ai 
 function gameLogic(user, ai) {
     switch (user) {
         case ai:
+            console.log("ai=", ai)
             draw();
             break;
         case "rock":
+            console.log("ai=", ai)
             if (ai === 'paper') {
                 lose();
             } else {
@@ -375,20 +379,22 @@ function gameLogic(user, ai) {
             }
             break;
         case "paper":
+            console.log("ai=", ai)
             if (ai === 'scissor') {
                 lose();
             } else {
                 win(); // paper beats rock
             }
             break;
-        case "scissors":
+        case "scissor":
+            console.log("ai=", ai)
             if (ai === 'rock') {
                 lose();
             } else {
                 win(); // scissors beats paper
             }
             break;
-        default:
-            break;
+        // default:
+        //     break;
     }
 }
