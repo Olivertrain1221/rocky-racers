@@ -97,7 +97,6 @@ Colour Schemes Used
 ![Contrast Check](/assets/images/hover-contrast.png)
 
 
-
 # Typography
 
 Google fonts was utilised to find a font that would be clean and clear for all users, whilst still conveying an element of fun. I eventually settled on 'Mukta'  sans-serif.
