@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: auto 100vh;
     background-image: url("../images/raceroad.jpg");
+    overflow: hidden;
 }
 
 
@@ -439,10 +440,10 @@ h1 {
     grid-template-rows: 10em 5vh auto 15em;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-areas: ". title title ."
-        "traffic-light game-icons game-icons score-boards"
-        "traffic-light game-icons game-icons score-boards"
-        "road road road road";
-         */
+    "traffic-light game-icons game-icons score-boards"
+    "traffic-light game-icons game-icons score-boards"
+    "road road road road";
+    */
     .grid-container {
         grid-template-rows: 8em 15vh 10vh auto;
         grid-template-columns: 1fr 2fr 2fr 1fr;
@@ -453,44 +454,44 @@ h1 {
     }
 
     #main-container {
-        font-size: 40px;
+        font-size: 25px;
         grid-area: score-boards;
         height: 600px;
     }
 
+    .rock-paper-scissor-logo {
+        transform: scale(0.9);
+    }
 
 
-#text-for-score-board {
-    width: 100%;
-    height: 100%;
-}
+    #text-for-score-board {
+        width: 100%;
+        height: 100%;
+    }
 
-.score-board {
-    height: 100%;
-}
+    .score-board {
+        height: 100%;
+    }
 
-#user-score,
-#ai-score {
-    display: inline-flex;
-}
+    #user-score,
+    #ai-score {
+        display: inline-flex;
+    }
 
-#traffic-light {
-    margin-left: 45%;
+    #traffic-light {
+        margin-left: 45%;
+        transform: rotate(270deg);
+    }
 }
 
 @media screen and (max-width:600px) {
-.modal-inner-container {
-    width:400px;
-    font-size: 18px;
-    
-}
+    .modal-inner-container {
+        width: 400px;
+        font-size: 18px;
+    }
 }
 
-.rock-paper-scissor-logo {}
 
-.score-board {}
-
-}
 @media screen and (max-width:500px) {
 
     /* 
@@ -511,7 +512,7 @@ h1 {
     }
 
     #main-container {
-        font-size: 40px;
+        font-size: 20px;
         grid-area: score-boards;
     }
 
@@ -531,10 +532,32 @@ h1 {
     }
 
     #traffic-light {
-        margin-left: 45%;
+        margin-left: 35%;
     }
 
-    .rock-paper-scissor-logo {}
+    .rock-paper-scissor-logo {
+        transform: scale(0.8);
+    }
+}
 
-    .score-board {}
+@media screen and (max-width:420px) {
+    #text-for-score-board {
+     font-size: 20px;   
+    }
+
+    .main-menu-button,
+    .night-day-button{
+        
+    }
+
+    .main-heading{
+        font-size: 30px;
+    }
+    .rock-paper-scissor-logo {
+        transform: scale(0.6);
+        margin-bottom: -60px;
+    }
+    .traffic-lights {
+        transform: scale(0.6);
+    }
 }
