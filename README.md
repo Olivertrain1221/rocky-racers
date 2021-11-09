@@ -7,7 +7,7 @@ Rocky Racers is a web base game with JavaScript, HTML and CSS. This game is a va
 
 ### UX
 The Strategy Plane
-*	Rocky Racers is intended to be a fun yet simple game for individual users to play for short periods of time against a computer element rather than requiring a third to party to also play with the game has small graphics and a score board in orderfor the user to feel satisfied with visual effects and to also bring out there competitive side by being able to view whos winning and losing.
+*	Rocky Racers is intended to be a fun yet simple game for individual users to play for short periods of time against a computer element. Rather than requiring a third party to also play with the game it has small graphics and a score board in order for the user to feel satisfied with visual effects and to also bring out there competitive side by being able to view whos winning and losing.
 
 ### Site Goals
 *	To provide users with a fun and simple game to play
@@ -54,21 +54,28 @@ Acceptance Criteria:
 Implementation:
     * The user will have the ability to choose from a night mode and a day mode also they can only select there answer as the traffic lights are enabled.
 
-Opportunities
+#### Opportunities
 Arising from user stories
-Opportunities	Importance	Viability / Feasibility
-** Provide a fun game environment **	5	5
-** Provide fun animations to bring the game to life **	5	5
-		
-** Provide ability to control the time the game takes **	5	5
-** Provide ability to change the colour scheme **	5	5
+| Opportunities | Importance | Viability / Feasibility
+| ------ | :------: | :------: |
+| ** Provide a fun game environment ** | 5 | 5 |
+| ** Provide ability to change the colour scheme ** | 5 | 5 |
+| ** Provide ability to control the time the game takes ** | 5 | 5 |
+| ** Provide fun animations to bring the game to life ** | 5 | 5 |
 		
 
 ### The Skeleton Plane
 Wireframe Mockups
 I used Balsamiq to produce low quality wireframes of how the game would appear across different devices and platforms. Although the game is intended to be contained on the one page, I produced a wireframe for each of the different parts of the content (Menu, Instructions and Game play). Using Balsamiq allowed me to consider multiple layouts ideas.
 
-![Main Menu Preview](/assets/images/read-me-images/homepage-actual.PNG)
+![Main Menu Wireframe](/assets/images/read-me-images/desktop-homepage.PNG)
+![Instruction Wireframe](/assets/images/read-me-images/desktop-instructions.PNG)
+![Gameplay Wireframe on a desktop](/assets/images/read-me-images/gameplay-desktop.PNG)
+![Gameplay Wireframe on a ipad](/assets/images/read-me-images/ipad-gameplay.PNG)
+![Gameplay Wireframe on a mobile](/assets/images/read-me-images/mobile-gameplay.PNG)
+
+
+
 
 ### The Surface Plane
 Design
@@ -77,12 +84,17 @@ Once happy with the theme and structure for the site, and the layout of each sec
 Background Image
 The background image helped to enhance the theme that I was aiming to creates. It was acquired from the vecteezy.com website where it was available for free download and use. 
 
-![Background Image](/assets/images/raceroad.jpg)
+![Main Menu Preview](/assets/images/read-me-images/homepage-actual.PNG)
 
 The original image was then amended via tinypng.com this was used to allow the photo to be reduced in size and for the applications boot time to be sped up which therefore increases usability.
-Colour Scheme
+
+
+## Colour Scheme
 To ensure that the colours I chose for all of my elements provided an appropriate contrast ratio the colour codes were loaded into a contrast checker available at Contrast Grid
 Colour Schemes Used
+
+![Contrast Check](/assets/images/contrast.png)
+![Contrast Check](/assets/images/hover-contrast.png)
 
 
 
@@ -139,32 +151,29 @@ Validator Testing
 ![HTML Validator](/assets/images/read-me-images/html-validator.PNG)
 ![JavaScript Validator](/assets/images/read-me-images/js-validator.PNG)
 ![CSS Validator](/assets/images/read-me-images/css-validator.PNG)
-
+![Lighthouse Report](/assets/images/read-me-images/lighthouse-report.PNG)
 
 
 # Notable Bugs
-No bugs of note were discovered during the development or testing of the site. However frustration with the different requirements from different browsers was experienced. Multiple small visual errors were encountered during testing across different devices, browsers or browser versions which needed additional CSS style rules to overcome. For example, older versions of iOS safari required button minimum dimensions to be added in order to display the buttons correctly.
+One major bug that i noticed during development was trying to top the traffic lights before the scoreboard was updated. This was corrected by disabling the game svgs and linking the traffic light function at the correct time.
 Deployment
     *	The site was deployed to GitHub pages. The steps to deploy are as follows:
     * In the GitHub repository, navigate to the settings tab
     * Select the pages link from the setting menu on the left hand side
     * Under the GitHub Pages from the source section drop-down menu, select the master branch
     * One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-The live link can be found here - UFO Duel Live Site
-Credits
-Media
+
+# Credits
+## Media
     * The background image of the trees was obtained from Vecteezy.com
     * The favicon was created by using favicon-generator.org. The generator created both the image file and the link tag code for the head of the HTML file.
-Content
+## Content
     * CSS Styling
-    * The styling for the custom slider used in the settings modal was amended from the code generated from a range.css generator. I discovered the site from an article on css-tricks.com.
-    * The animation for the UFO's sliding in and out of the screen was initially generated on animista.net. Whilst I subsequently created several other animations I used the original code generated from the site as a reference point.
     * How to create the custom toggle switches used in the settings modal were developed from a tutorial on w3schools.
-    * Hard Mode Logic
-    * Wang, Z. and Xu, B. and Zhou, H. (2014) 'Social cycling and conditional responses in the Rock-Paper-Scissors game', Scientific Reports, 4(5830) available at: link to published article last accessed on 24/07/2021. This journal article of a study done into the patterns in people's decision making during a game of Rock Paper Scissors formed the basis of the logic implemented for the hard difficulty.
-Reference Material
+## Reference Material
     * W3 Schools was used as a reference point for HTML, CSS and JavaScript
-    * MDN Web Docs was also used as a reference point for HTML, CSS and JavaScript
-Acknowledgements
-I'd like to thank my mentor Rahul Lakhanpal for encouraging me to be more ambitious than my original design for the project. The more ambitious design was a lot of fun to create.
+    * MDN Web Docs was also used as a reference point for HTML, CSS and JavaScriptoggle switches - I referenced a fellow student Matt Bodden, and the toggle switch tutorial    available on w3schools whilst developing the styling and functionality of the toggle switches. Matt's project that I referenced can be found here https://github.com/MattBCoding/ufoduel and the w3schools tutorial can be found here https://www.w3schools.com/howto/howto_css_switch.asp
+
+# Acknowledgements
+I would also like to comment and thank my mentor Tim Nelson from CI for encouraging me to be more ambitious and ensure that my game was different and stood out along with helping with various code issues I had along the way.
 
