@@ -4,43 +4,50 @@
 Rocky Racers is a web base game with JavaScript, HTML and CSS. This game is a variant of the traditional “rock paper scissor” this game has a target audience of someone who may want a short fun game to play.
 
 ![Home Page Preview](/assets/images/read-me-images/responsive-image.PNG)
+
 ### UX
 The Strategy Plane
-•	Rocky Racers is intended to be a fun yet simple game for individual users to play for short periods of time against a computer element rather than requiring a third to party to also play with the game has small graphics and a score board in orderfor the user to feel satisfied with visual effects and to also bring out there competitive side by being able to view whos winning and losing.
+*	Rocky Racers is intended to be a fun yet simple game for individual users to play for short periods of time against a computer element rather than requiring a third to party to also play with the game has small graphics and a score board in orderfor the user to feel satisfied with visual effects and to also bring out there competitive side by being able to view whos winning and losing.
 
 ### Site Goals
-•	To provide users with a fun and simple game to play
-•	To ensure that navigating the site is easy and intuitive, users don't need to work out where to go.
-•	To provide users with alternative difficulty levels
-•	To provide users with alternative methods to play the game
-•	To ensure the game is fully accessible on desktop and touch enabled devices
-•	To ensure the game is fully compliant with keyboard commands and screen readers
+*	To provide users with a fun and simple game to play
+*	To ensure that navigating the site is easy and intuitive, users don't need to work out where to go.
+*	To provide users with alternative difficulty levels
+*	To provide users with alternative methods to play the game
+*	To ensure the game is fully accessible on desktop and touch enabled devices
+
+![Settings Page Preview](/assets/images/read-me-images/settings-screenshot.PNG)
+
 ### User Stories
-•	As a user I want a fun and simple game to play
-•	As a user I want to be able to play a more challenging version of the game
-•	As a user I want to be able to play an easier and quicker version of the game
-•	As a user I like to play games in the evening and want to be able to reduce eye strain upon playing.
-The Scope Plane
+*	As a user I want a fun and simple game to play
+*	As a user I want to be able to play a more challenging version of the game
+*	As a user I want to be able to play an easier and quicker version of the game
+*	As a user I like to play games in the evening and want to be able to reduce eye strain upon playing.
+
+
+## The Scope Plane
+
 ### Features planned:
-•	Responsive Design - The site should function correctly across the range of devices the user could potentially use to access the game on such as Desktop, Laptop, Tablet and Mobile's.
-•	All navigation elements should be contained within the game screen. No need to search for anything.
-•	The site should be visually stimulating and clear to the user that it is a game.
-•	Alternative colour options should be available such as a dark mode.
-•	The site should be fully accessible for screen reader users.
+*	Responsive Design - The site should function correctly across the range of devices the user could potentially use to access the game on such as Desktop, Laptop, Tablet and Mobile's.
+*	All navigation elements should be contained within the game screen. No need to search for anything.
+*	The site should be visually stimulating and clear to the user that it is a game.
+*	Alternative colour options should be available such as a dark mode.
+*	The site should be fully accessible for screen reader users.
 
 ### The Structure Plane
+
 ## User Story:
 As a user, I want a fun and simple game to play
 Acceptance Criteria:
-•	It should be clear that it is a game, what it is about and how to play.
+    * It should be clear that it is a game, what it is about and how to play.
 Implementation:
-•	The layout, colour scheme font choice and graphic choices should all make it clear and provide a sense of fun to the user that this is a game site. There will be a direct link to the instructions of the game on the homepage so the user can easily learn how to play.
+    * The layout, colour scheme font choice and graphic choices should all make it clear and provide a sense of fun to the user that this is a game site. There will be a direct link to the instructions of the game on the homepage so the user can easily learn how to play.
 User Story:
 As a user, I want to be able to control the time it takes to play the game
 Acceptance Criteria:
-•	The user should be able to choose to play the game as many times as they want and allow them to quit at any point via the main menu button.
+    * The user should be able to choose to play the game as many times as they want and allow them to quit at any point via the main menu button.
 Implementation:
-•	The user will have the ability to choose from a night mode and a day mode also they can only select there answer as the traffic lights are enabled.
+    * The user will have the ability to choose from a night mode and a day mode also they can only select there answer as the traffic lights are enabled.
 Opportunities
 Arising from user stories
 Opportunities	Importance	Viability / Feasibility
@@ -66,7 +73,6 @@ The background image helped to enhance the theme that I was aiming to creates. I
 
 ![Background Image](/assets/images/raceroad.jpg)
 
-
 The original image was then amended via tinypng.com this was used to allow the photo to be reduced in size and for the applications boot time to be sped up which therefore increases usability.
 Colour Scheme
 To ensure that the colours I chose for all of my elements provided an appropriate contrast ratio the colour codes were loaded into a contrast checker available at Contrast Grid
@@ -88,16 +94,12 @@ Dark Colour Scheme
     * The second screen the user will come across will be to ask them to enter their name. 
 
 ![Name menu Preview](/assets/images/read-me-images/homepage-actual.PNG)
-![Night Mode Previw](/assets/images/raceroad-night.png)
-
-
-
-
+![Night Mode Preview](/assets/images/raceroad-night.png)
 
 # Future Enhancements
     * Leaderboard
     * I would like to add a leader board function in so the highest winner can be shown along with users being able to compare their scores to other users that have played the game
-![Night Mode Previw](/assets/images/read-me-images/leaderboard-page.PNG)
+![Leaderboard Wireframe](/assets/images/read-me-images/leaderboard-page.PNG)
 
 
     * Different Levels
@@ -134,24 +136,24 @@ No bugs of note were discovered during the development or testing of the site. H
 Deployment
     *	The site was deployed to GitHub pages. The steps to deploy are as follows:
     * In the GitHub repository, navigate to the settings tab
-    *Select the pages link from the setting menu on the left hand side
+    * Select the pages link from the setting menu on the left hand side
     * Under the GitHub Pages from the source section drop-down menu, select the master branch
     * One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 The live link can be found here - UFO Duel Live Site
 Credits
 Media
-•	The background image of the trees was obtained from Vecteezy.com
-•	The favicon was created by using favicon-generator.org. The generator created both the image file and the link tag code for the head of the HTML file.
+    * The background image of the trees was obtained from Vecteezy.com
+    * The favicon was created by using favicon-generator.org. The generator created both the image file and the link tag code for the head of the HTML file.
 Content
-•	CSS Styling
-o	The styling for the custom slider used in the settings modal was amended from the code generated from a range.css generator. I discovered the site from an article on css-tricks.com.
-o	The animation for the UFO's sliding in and out of the screen was initially generated on animista.net. Whilst I subsequently created several other animations I used the original code generated from the site as a reference point.
-o	How to create the custom toggle switches used in the settings modal were developed from a tutorial on w3schools.
-•	Hard Mode Logic
-o	Wang, Z. and Xu, B. and Zhou, H. (2014) 'Social cycling and conditional responses in the Rock-Paper-Scissors game', Scientific Reports, 4(5830) available at: link to published article last accessed on 24/07/2021. This journal article of a study done into the patterns in people's decision making during a game of Rock Paper Scissors formed the basis of the logic implemented for the hard difficulty.
+    * CSS Styling
+    * The styling for the custom slider used in the settings modal was amended from the code generated from a range.css generator. I discovered the site from an article on css-tricks.com.
+    * The animation for the UFO's sliding in and out of the screen was initially generated on animista.net. Whilst I subsequently created several other animations I used the original code generated from the site as a reference point.
+    * How to create the custom toggle switches used in the settings modal were developed from a tutorial on w3schools.
+    * Hard Mode Logic
+    * Wang, Z. and Xu, B. and Zhou, H. (2014) 'Social cycling and conditional responses in the Rock-Paper-Scissors game', Scientific Reports, 4(5830) available at: link to published article last accessed on 24/07/2021. This journal article of a study done into the patterns in people's decision making during a game of Rock Paper Scissors formed the basis of the logic implemented for the hard difficulty.
 Reference Material
-•	W3 Schools was used as a reference point for HTML, CSS and JavaScript
-•	MDN Web Docs was also used as a reference point for HTML, CSS and JavaScript
+    * W3 Schools was used as a reference point for HTML, CSS and JavaScript
+    * MDN Web Docs was also used as a reference point for HTML, CSS and JavaScript
 Acknowledgements
 I'd like to thank my mentor Rahul Lakhanpal for encouraging me to be more ambitious than my original design for the project. The more ambitious design was a lot of fun to create.
 
