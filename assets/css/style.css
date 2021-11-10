@@ -23,12 +23,12 @@ body {
     display: grid;
     height: 100vh;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     -ms-grid-rows: 10em 5vh auto 15em;
     grid-template-rows: 10em 5vh auto 15em;
     -ms-grid-columns: 1fr 2fr 2fr 1fr;
     grid-template-columns: 1fr 2fr 2fr 1fr;
-        grid-template-areas: ". title title ."
+    grid-template-areas: ". title title ."
         "traffic-light game-icons game-icons score-boards"
         "traffic-light game-icons game-icons score-boards"
         "road road road road";
@@ -87,7 +87,7 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
 }
 
 .settings-button {
@@ -95,11 +95,11 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 60px;
     width: 300px;
     margin-left: 110px;
@@ -157,10 +157,13 @@ h1 {
 
 .checkbox:checked~.toggle:before {
     -webkit-transform: translateX(40px);
-        -ms-transform: translateX(40px);
-            transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
 }
 
+.title-change {
+    color:white;
+}
 .toggle:after {
     content: "";
     position: absolute;
@@ -174,14 +177,14 @@ h1 {
     -o-transition: 500ms;
     transition: 500ms;
     -webkit-transform: translateX(-40px);
-        -ms-transform: translateX(-40px);
-            transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    transform: translateX(-40px);
 }
 
 .checkbox:checked~.toggle:after {
     -webkit-transform: translateX(0px);
-        -ms-transform: translateX(0px);
-            transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
 }
 
 /* Hover effect on game tiles */
@@ -203,11 +206,11 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 40px;
     margin-left: 275px;
     margin-top: 30px;
@@ -219,11 +222,11 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 60px;
     width: 300px;
     margin-left: 110px;
@@ -240,11 +243,11 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 60px;
     width: 300px;
     margin-left: 110px;
@@ -260,11 +263,11 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 70px;
     width: 80px;
     margin-bottom: 40px;
@@ -292,11 +295,11 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 70px;
     width: 80px;
     margin-left: 10px;
@@ -415,7 +418,7 @@ h1 {
     height: 100%;
     width: 100%;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #scissor-image {
@@ -454,8 +457,8 @@ h1 {
     bottom: 10px;
     left: 50%;
     -webkit-transform: translate(-50%, 170px);
-        -ms-transform: translate(-50%, 170px);
-            transform: translate(-50%, 170px);
+    -ms-transform: translate(-50%, 170px);
+    transform: translate(-50%, 170px);
 }
 
 /* Rock images */
@@ -472,11 +475,11 @@ h1 {
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     gap: 10px;
     grid-area: game-icons;
 }
@@ -490,11 +493,11 @@ h1 {
     background-color: #a15d21;
     color: rgb(255, 255, 255);
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     font-family: 'Mukta', sans-serif;
     font-size: 25px;
     border-color: #966036;
@@ -515,8 +518,8 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 /* Start of Media Querys */
@@ -527,7 +530,7 @@ h1 {
         grid-template-rows: 8em 15vh 10vh auto;
         -ms-grid-columns: 1fr 2fr 2fr 1fr;
         grid-template-columns: 1fr 2fr 2fr 1fr;
-            grid-template-areas: ". title title ."
+        grid-template-areas: ". title title ."
             ". score-boards score-boards ."
             ". traffic-light traffic-light ."
             ". game-icons game-icons .";
@@ -544,8 +547,8 @@ h1 {
 
     #rock-paper-scissor-logo {
         -webkit-transform: scale(0.9);
-            -ms-transform: scale(0.9);
-                transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
     }
 
     #close-button {
@@ -572,8 +575,8 @@ h1 {
     #traffic-light {
         margin-left: 170px;
         -webkit-transform: rotate(270deg);
-            -ms-transform: rotate(270deg);
-                transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
     }
 
     .modal-inner-container {
@@ -627,9 +630,9 @@ h1 {
 
     .night-day-button,
     .main-menu-button {
-    -webkit-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
-            transform: scale(0.8);
+        transform: scale(0.8);
     }
 
     .grid-container {
@@ -637,7 +640,7 @@ h1 {
         grid-template-rows: 8em 15vh 10vh auto;
         -ms-grid-columns: 1fr 2fr 2fr 1fr;
         grid-template-columns: 1fr 2fr 2fr 1fr;
-            grid-template-areas: ". title title ."
+        grid-template-areas: ". title title ."
             ". score-boards score-boards ."
             ". traffic-light traffic-light ."
             ". game-icons game-icons .";
@@ -663,7 +666,7 @@ h1 {
     #text-for-score-board {
         width: 100%;
         height: 100%;
-        font-size:20px;
+        font-size: 20px;
     }
 
     .score-board {
@@ -685,8 +688,8 @@ h1 {
 
     .rock-paper-scissor-logo {
         -webkit-transform: scale(0.8);
-            -ms-transform: scale(0.8);
-                transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
     }
 
     .main-heading {
@@ -743,46 +746,46 @@ h1 {
     }
 
     .score-board {
-        width: 100%;        
+        width: 100%;
     }
-    
+
     #close-button {
         margin-left: 60px;
     }
-    
+
     .main-heading {
         font-size: 30px;
     }
 
     .settings-modal-column {
-        margin-top:27px;
+        margin-top: 27px;
         margin-right: 20px;
     }
-    
+
     .traffic-lights {
         -webkit-transform: rotate(270deg) scale(0.8);
-            -ms-transform: rotate(270deg) scale(0.8);
-                transform: rotate(270deg) scale(0.8);
+        -ms-transform: rotate(270deg) scale(0.8);
+        transform: rotate(270deg) scale(0.8);
     }
 
     .night-day-button,
     .main-menu-button {
         -webkit-transform: scale(0.7);
-            -ms-transform: scale(0.7);
-                transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
     }
-    
+
     .rock-paper-scissor-logo {
         -webkit-transform: scale(0.6);
-            -ms-transform: scale(0.6);
-                transform: scale(0.6);
+        -ms-transform: scale(0.6);
+        transform: scale(0.6);
         margin-bottom: -60px;
     }
-    
+
     .traffic-lights {
         -webkit-transform: scale(0.6);
-            -ms-transform: scale(0.6);
-                transform: scale(0.6);
+        -ms-transform: scale(0.6);
+        transform: scale(0.6);
     }
 
     .modal-inner-container {
@@ -797,50 +800,50 @@ h1 {
 
     @media screen and (max-width:900px) {
 
-    #main-container {
+        #main-container {
             -ms-grid-row: 2;
             -ms-grid-row-span: 1;
             -ms-grid-column: 2;
             -ms-grid-column-span: 2;
-    }
+        }
 
-    #main-container {
+        #main-container {
             -ms-grid-row: 2;
             -ms-grid-row-span: 1;
             -ms-grid-column: 2;
             -ms-grid-column-span: 2;
-    }
+        }
 
-    .modal-inner-container {
+        .modal-inner-container {
             -ms-grid-row: 2;
             -ms-grid-row-span: 1;
             -ms-grid-column: 2;
             -ms-grid-column-span: 2;
-    }
+        }
     }
 
     @media screen and (max-width:520px) {
 
-    #main-container {
+        #main-container {
             -ms-grid-row: 2;
             -ms-grid-row-span: 1;
             -ms-grid-column: 2;
             -ms-grid-column-span: 2;
-    }
+        }
 
-    .modal-inner-container {
+        .modal-inner-container {
             -ms-grid-row: 2;
             -ms-grid-row-span: 1;
             -ms-grid-column: 2;
             -ms-grid-column-span: 2;
-    }
+        }
     }
 
     #night-day-span,
     #rounds-span {
         -webkit-transform: scale(0.7);
-            -ms-transform: scale(0.7);
-                transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
         margin-top: 30px;
     }
 }

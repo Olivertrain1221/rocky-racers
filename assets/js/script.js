@@ -5,6 +5,12 @@ let roundsWanted = 3;
 function nightMode() {
     bodyTag.classList.toggle("night-background");
     trafficLight.classList.add("traffic-light-at-night");
+    titleColorChange()
+}
+
+function titleColorChange() {
+    let title = document.getElementById("main-heading");
+    title.classList.toggle("title-change");
 }
 
 // Opens the instruction modal.
@@ -40,7 +46,7 @@ nightDayToggle.addEventListener("change", nightMode);
 
 let roundsToggle = document.getElementById("rounds-checkbox");
 
-roundsToggle.addEventListener("change", function(e) {
+roundsToggle.addEventListener("change", function (e) {
     if (roundsToggle.checked) {
         roundsWanted = 5;
     } else {
@@ -179,7 +185,7 @@ function turnOnAiSelectionEffect(ai) {
             scissorOuterCircle.classList.add("outer-circle-fill");
             break;
     }
-    
+
     setTimeout(function () {
         turnOffAiSelectionEffect();
     }, 3000);
@@ -278,7 +284,7 @@ function aiSelection(user) {
     disableGameSvgs();
     turnOnAiSelectionEffect(ai);
 
-    setTimeout(function() {
+    setTimeout(function () {
         gameLogic(user, ai);
     }, 3000);
 }
