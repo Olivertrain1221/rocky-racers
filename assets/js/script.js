@@ -5,7 +5,7 @@ let roundsWanted = 3;
 function nightMode() {
     bodyTag.classList.toggle("night-background");
     trafficLight.classList.add("traffic-light-at-night");
-    titleColorChange()
+    titleColorChange();
 }
 
 function titleColorChange() {
