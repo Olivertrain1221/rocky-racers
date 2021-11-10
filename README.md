@@ -1,22 +1,22 @@
 # Rocky Racers
 
-## Introduction
+# Introduction
 Rocky Racers is a web base game with JavaScript, HTML and CSS. This game is a variant of the traditional “rock paper scissor” this game has a target audience of someone who may want a short fun game to play.
 
 ![Home Page Preview](/assets/images/read-me-images/responsive-image.PNG)
 
-### UX
+# UX
 The Strategy Plane
 *	Rocky Racers is intended to be a fun yet simple game for individual users to play for short periods of time against a computer element. Rather than requiring a third party to also play with the game it has small graphics and a score board in order for the user to feel satisfied with visual effects and to also bring out there competitive side by being able to view whos winning and losing.
 
-### Site Goals
+# Site Goals
 *	To provide users with a fun and simple game to play
 *	To ensure that navigating the site is easy and intuitive, users don't need to work out where to go.
 *	To ensure the game is fully accessible on desktop and touch enabled devices
 
 ![Settings Page Preview](/assets/images/read-me-images/settings-screenshot.PNG)
 
-### User Stories
+# User Stories
 *	As a user I want a fun and simple game to play
 *	As a user I want to be able to play a more challenging version of the game
 *	As a user I want to be able to play an easier and quicker version of the game
@@ -25,16 +25,16 @@ The Strategy Plane
 ![Night mode Preview](/assets/images/read-me-images/night-image-gameplay.PNG)
 
 The Scope Plane
-### Features planned:
+# Features planned:
 *	Responsive Design - The site should function correctly across the range of devices the user could potentially use to access the game on such as Desktop, Laptop, Tablet and Mobile's.
 *	All navigation elements should be contained within the game screen. No need to search for anything.
 *	The site should be visually stimulating and clear to the user that it is a game.
 *	Alternative colour options should be available such as a dark mode.
 *	The site should be fully accessible for screen reader users.
 
-### The Structure Plane
+# The Structure Plane
 
-## User Story:
+# User Story:
 
 As a user, I want a fun and simple game to play
 Acceptance Criteria:
@@ -52,7 +52,7 @@ Acceptance Criteria:
 Implementation:
 *   The user will have the ability to choose from a night mode and a day mode also they can only select there answer as the traffic lights are enabled.
 
-#### Opportunities
+# Opportunities
 Arising from user stories
 | Opportunities | Importance | Viability / Feasibility
 | ------ | :------: | :------: |
@@ -62,7 +62,7 @@ Arising from user stories
 | ** Provide fun animations to bring the game to life ** | 5 | 5 |
 		
 
-### The Skeleton Plane
+# The Skeleton Plane
 Wireframe Mockups
 I used Balsamiq to produce low quality wireframes of how the game would appear across different devices and platforms. Although the game is intended to be contained on the one page, I produced a wireframe for each of the different parts of the content (Menu, Instructions and Game play). Using Balsamiq allowed me to consider multiple layouts ideas.
 
@@ -73,7 +73,7 @@ I used Balsamiq to produce low quality wireframes of how the game would appear a
 ![Gameplay Wireframe on a mobile](/assets/images/read-me-images/mobile-gameplay.PNG)
 
 
-### The Surface Plane
+# The Surface Plane
 Design
 Once happy with the theme and structure for the site, and the layout of each section of the content. I then started to style my site using the CSS and used colours accordingly to ensure there are no contrast issues. 
 
@@ -84,7 +84,7 @@ The background image helped to enhance the theme that I was aiming to create. It
 
 The original image was then amended via tinypng.com this was used to allow the photo to be reduced in size and for the applications boot time to be sped up which therefore increases usability and will keep the audience playing finding it to be interactive and quick to resemble also the fast paced game it is.
 
-## Colour Scheme
+# Colour Scheme
 To ensure that the colours I chose for all of my elements provided an appropriate contrast ratio the colour codes were loaded into a contrast checker available at Contrast Grid
 Colour Schemes Used
 
@@ -147,15 +147,15 @@ Validator Testing
 ![CSS Validator](/assets/images/read-me-images/css-validator.PNG)
 ![Lighthouse Report](/assets/images/read-me-images/lighthouse-report.PNG)
 
-
-# Notable Bugs
-One major bug that I noticed during development was trying to stop the traffic lights before the scoreboard was updated. This was corrected by disabling the game svgs and linking the traffic light function at the correct time.
-Deployment
+# Deployment
 *   The site was deployed to GitHub pages. The steps to deploy are as follows:
 *   In the GitHub repository, navigate to the settings tab
 *   Select the pages link from the setting menu on the left hand side
 *   Under the GitHub Pages from the source section drop-down menu, select the master branch
 *   Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+# Notable Bugs
+One major bug that I noticed during development was trying to stop the traffic lights before the scoreboard was updated. This was corrected by disabling the game svgs and linking the traffic light function at the correct time.
 
 # Credits
 ## Media
