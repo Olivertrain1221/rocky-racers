@@ -167,6 +167,7 @@ One major bug that I noticed during development was trying to stop the traffic l
 ## Reference Material
     * W3 Schools was used as a reference point for HTML, CSS and JavaScript
     * MDN Web Docs was also used as a reference point for HTML, CSS and JavaScriptoggle switches - I referenced a fellow student Matt Bodden, and the toggle switch tutorial    available on w3schools whilst developing the styling and functionality of the toggle switches. Matt's project that I referenced can be found here https://github.com/MattBCoding/ufoduel and the w3schools tutorial can be found here https://www.w3schools.com/howto/howto_css_switch.asp
+    * CI course material was also used as a reference for code related issues.
 
 # Acknowledgements
 I would also like to comment and thank my mentor Tim Nelson from CI for encouraging me to be more ambitious and ensure that my game was different and stood out along with helping with various code issues I had along the way.
