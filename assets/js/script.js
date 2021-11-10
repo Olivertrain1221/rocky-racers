@@ -1,9 +1,4 @@
 /* jshint esversion: 8 */
-
-
-// readme to do
-// media queries
-
 let roundsWanted = 3;
 
 const resetClassList = (elm, initialClassList) => {
@@ -11,26 +6,27 @@ const resetClassList = (elm, initialClassList) => {
     initialClassList.forEach((className) => elm.classList.add(className));
 };
 
+// Night mode toggle.
 function nightMode() {
     bodyTag.classList.toggle("night-background");
     trafficLight.classList.add("traffic-light-at-night");
 }
-// TODO: comeback and fix me !!!!!
-// Opens the instruction modal
+
+// Opens the instruction modal.
 function openModal() {
     modalContainer.style.display = "block";
-
 }
 
 let userName = "";
 let settingsCloseButton = document.getElementById("settings-close-button");
 settingsCloseButton.addEventListener("click", closeSettingsModal);
 
-// closesModal
+// closesModal.
 function closeModal() {
     modalContainer.style.display = "none";
 }
-// Modal container element assignement
+
+// Modal container element assignement.
 let buttonSettings = document.getElementById("button-settings");
 buttonSettings.addEventListener("click", openSettingsModal);
 
@@ -41,17 +37,15 @@ function openSettingsModal() {
 
 function closeSettingsModal() {
     let settingsModal = document.getElementById("settings-modal");
-    // settingsModal.classList.add("hidden");
     settingsModal.style.display = "none";
 }
 
 let nightDayToggle = document.getElementById("night-day-checkbox");
 nightDayToggle.addEventListener("change", nightMode);
 
-
 let roundsToggle = document.getElementById("rounds-checkbox");
 
-roundsToggle.addEventListener("change", function (e) {
+roundsToggle.addEventListener("change", function(e) {
     if (roundsToggle.checked) {
         roundsWanted = 5;
     } else {
@@ -59,22 +53,16 @@ roundsToggle.addEventListener("change", function (e) {
     }
 });
 
-// Checking the winner result via the ai
+// Checking the winner result via the ai.
 function checkWinner() {
     if (userScoreBoard.innerHTML == roundsWanted) {
-        // what to do if the user wins
+        // what to do if the user wins.
         location.reload();
     } else if (aiScoreBoard.innerHTML == roundsWanted) {
-        // what to do if the AI wins
+        // what to do if the AI wins.
         location.reload();
     }
 }
-
-
-
-
-
-
 
 let bodyTag = document.getElementsByTagName("body")[0];
 let modalContainer = document.getElementById("modal-container");
@@ -82,7 +70,8 @@ let buttonInstruction = document.getElementById("button-instruction");
 let closeInstructionButton = document.getElementById("close-button");
 let nightButton = document.getElementById("night-button");
 let mainMenuButton = document.getElementById("menu-button");
-// modalContainers event listeners to open/close
+
+// modalContainers event listeners to open/close.
 closeInstructionButton.addEventListener("click", closeModal);
 buttonInstruction.addEventListener("click", openModal);
 nightButton.addEventListener("click", nightMode);
@@ -93,7 +82,7 @@ function mainMenuReset() {
     location.reload();
 }
 
-// Event listener for whole window to run the modalContainerClick func.
+// Event listener for whole window to run the modalContainerClick function.
 window.addEventListener("click", modalContainerClick);
 
 // Getting main container and button elements to link with traffic lights.
@@ -101,7 +90,7 @@ let mainContainer = document.getElementById("main-container");
 let playButton = document.getElementById("button-play");
 let trafficLight = document.getElementById("traffic-light");
 
-// Turns the color of the game tiles depending on ai selection
+// Turns the color of the game tiles depending on ai selection.
 function turnOffAiSelectionEffect() {
     let rockOuterCircle = document.getElementById("rock-circle");
     let paperOuterCircle = document.getElementById("paper-circle");
@@ -112,11 +101,10 @@ function turnOffAiSelectionEffect() {
     scissorOuterCircle.classList.remove("outer-circle-fill");
 }
 
-// PlayButton event listener to run the username func
+// PlayButton event listener to run the username function.
 playButton.addEventListener("click", getUserName);
 
-
-// Gets the Users name input
+// Gets the Users name input.
 function getUserName() {
     let nameModal = document.getElementById("name-modal");
     nameModal.style.display = "block";
@@ -130,22 +118,17 @@ function getUserName() {
             mainContainer.style.display = "none";
             gameStartup();
         }
-
-
-
     });
 }
 
-// Closes the modal upon event
-
-// Closes the instructions modal
+// Closes the instructions modal.
 function modalContainerClick(e) {
     if (e.target == modalContainer) {
         modalContainer.style.display = "none";
     }
 }
 
-// Adds the class and calculates wether winner or loser or draw
+// Adds the class and calculates wether winner or loser or draw.
 function winner(result) {
     let winnerMessage = document.getElementById("winner-message");
     if (result == "win") {
@@ -163,8 +146,7 @@ function winner(result) {
     }
 }
 
-
-// The traffic lights coming on
+// The traffic lights coming on.
 function redLightOn() {
     let redLight = document.getElementById("red");
     redLight.classList.add("red-light-on");
@@ -173,7 +155,6 @@ function redLightOn() {
 function yellowLightOn() {
     let yellowLight = document.getElementById("yellow");
     yellowLight.classList.add("yellow-light-on");
-
 }
 
 function greenLightOn() {
@@ -186,8 +167,7 @@ function LightOff() {
     document.getElementById("green").classList.remove("green-light-on");
 }
 
-
-// Determines what game tile to put the effect onto
+// Determines what game tile to put the effect onto.
 function turnOnAiSelectionEffect(ai) {
     let rockOuterCircle = document.getElementById("rock-circle");
     let paperOuterCircle = document.getElementById("paper-circle");
@@ -212,22 +192,20 @@ function turnOnAiSelectionEffect(ai) {
 
 let svgs = document.querySelectorAll("svg");
 
-// Enables the games svgs
+// Enables the games svgs.
 function enableGameSvgs() {
     svgs.forEach(svg => {
         svg.classList.remove("disable-svg-effects");
     });
 }
 
-// Disables the games svgs
+// Disables the games svgs.
 function disableGameSvgs() {
     svgs.forEach(svg => {
         svg.classList.add("disable-svg-effects");
     });
 }
 
-// change style to classses that apply flex.
-// Starts the game
 let scoreBoard = document.getElementById("score-board");
 
 function gameStartup() {
@@ -239,13 +217,12 @@ function gameStartup() {
     trafficLightAnimation();
 }
 
-// Adds the time sequence
+// Adds the time sequence.
 function trafficLightAnimation() {
     let trafficLight = document.getElementById("traffic-light");
     trafficLight.classList.add("inline-block");
 
-
-    // Time section for traffic light
+    // Time section for traffic light.
     setTimeout(function () {
         redLightOn();
     }, 2000);
@@ -258,21 +235,14 @@ function trafficLightAnimation() {
         greenLightOn();
         enableGameSvgs();
     }, 3000);
-
-
 }
-
 
 let rock = document.getElementById("rock-image");
 let paper = document.getElementById("paper-image");
 let scissor = document.getElementById("scissor-image");
 
-//  Adds event listeners
-// function gameTileEventListeners() {
+// Game tile event listeners.
 rock.addEventListener("click", function () {
-    //   toggle class for fill
-    //  then time interval before userSelection!!
-
     userSelection("r");
     LightOff();
 
@@ -286,11 +256,11 @@ scissor.addEventListener("click", function () {
     LightOff();
 });
 
-
 let rockInnerCircle = document.getElementById("inner-rock-image");
 let paperInnerCircle = document.getElementById("inner-paper-image");
 let scissorInnerCircle = document.getElementById("inner-scissor-image");
-// What the user selects adds appropriate classes
+
+// What the user selects adds appropriate class.
 function userSelection(tile) {
     let user = "";
     if (tile == "r") {
@@ -304,11 +274,9 @@ function userSelection(tile) {
         scissorInnerCircle.classList.add("inner-image-fill");
     }
     aiSelection(user);
-
 }
 
-
-// Calculates the actual ai selection
+// Calculates the actual ai selection.
 function aiSelection(user) {
     let aiOptions = ["rock", "paper", "scissor"];
     let ai = aiOptions[Math.floor(Math.random() * 3)];
@@ -316,26 +284,23 @@ function aiSelection(user) {
     turnOnAiSelectionEffect(ai);
 
     setTimeout(function() {
-        console.log("user=", user);
-        console.log("ai=", ai);
         gameLogic(user, ai);
     }, 3000);
-
-
 }
 
 let aiScoreBoard = document.getElementById("ai-score");
 let userScoreBoard = document.getElementById("user-score");
 let aiScore = 0;
 let userScore = 0;
-// Removes the user selections
+
+// Removes the user selections.
 function removeUserSelectionColor() {
     paperInnerCircle.classList.remove("inner-image-fill");
     rockInnerCircle.classList.remove("inner-image-fill");
     scissorInnerCircle.classList.remove("inner-image-fill");
 }
 
-//Turns off effects and restarts game startup if a Draw
+//Turns off effects and restarts game startup if a Draw.
 function win() {
     userScore++;
     userScoreBoard.innerHTML = userScore;
@@ -343,9 +308,9 @@ function win() {
     winner("win");
     checkWinner();
     gameStartup();
-    console.log("made-it-to-end-of-win")
 }
-//Turns off effects and restarts game startup if a Draw
+
+//Turns off effects and restarts game startup if a Draw.
 function lose() {
     aiScore++;
     aiScoreBoard.innerHTML = aiScore;
@@ -353,48 +318,43 @@ function lose() {
     winner("lose");
     checkWinner();
     gameStartup();
-    console.log("made-it-to-end-of-lose")
 }
-//Turns off effects and restarts game startup if a Draw
+
+//Turns off effects and restarts game startup if a Draw.
 function draw() {
     removeUserSelectionColor();
     winner("draw");
     gameStartup();
-    console.log("made-it-to-end-of-draw")
 }
 
-// Game logic comparing user and ai 
+// Game logic comparing user and ai.
 function gameLogic(user, ai) {
     switch (user) {
         case ai:
-            console.log("ai=", ai)
             draw();
             break;
         case "rock":
-            console.log("ai=", ai)
             if (ai === 'paper') {
                 lose();
             } else {
-                win(); // rock beats scissors
+                win(); // rock beats scissors.
             }
             break;
         case "paper":
-            console.log("ai=", ai)
             if (ai === 'scissor') {
                 lose();
             } else {
-                win(); // paper beats rock
+                win(); // paper beats rock.
             }
             break;
         case "scissor":
-            console.log("ai=", ai)
             if (ai === 'rock') {
                 lose();
             } else {
-                win(); // scissors beats paper
+                win(); // scissors beats paper.
             }
             break;
-        // default:
-        //     break;
+        default:
+            break;
     }
 }
