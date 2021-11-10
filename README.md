@@ -149,7 +149,7 @@ Validator Testing
 
 
 # Notable Bugs
-One major bug that i noticed during development was trying to top the traffic lights before the scoreboard was updated. This was corrected by disabling the game svgs and linking the traffic light function at the correct time.
+One major bug that I noticed during development was trying to stop the traffic lights before the scoreboard was updated. This was corrected by disabling the game svgs and linking the traffic light function at the correct time.
 Deployment
 *   The site was deployed to GitHub pages. The steps to deploy are as follows:
 *   In the GitHub repository, navigate to the settings tab

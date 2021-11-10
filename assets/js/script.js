@@ -1,11 +1,6 @@
 /* jshint esversion: 8 */
 let roundsWanted = 3;
 
-const resetClassList = (elm, initialClassList) => {
-    elm.classList = "";
-    initialClassList.forEach((className) => elm.classList.add(className));
-};
-
 // Night mode toggle.
 function nightMode() {
     bodyTag.classList.toggle("night-background");
